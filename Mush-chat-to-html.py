@@ -3,7 +3,7 @@ f = open(n + '.txt', 'r')
 dest = open(n + '.html', 'w')
 
 def smileySource(string):
-	return string.replace('src="//', 'src="http://').replace('src="http://data.twinoid.com/img/smile', 'src="/smile').replace('src="/img', 'src="http://mush.vg/img')
+	return string.replace('src="//', 'src="http://').replace('src="http://data.twinoid.com/img/smile', 'src="smile').replace('src="/img', 'src="http://mush.vg/img')
 
 ismainmessage = True
 mainmessages = []
@@ -44,7 +44,7 @@ dest.write("\t<style>\n" +
 "		.char { background: url('img/char.png'); background-repeat: no-repeat; width: 28px; height: 48px; resize: none; float: left; }\n" +
 "		.reply .char { height: 16px; }\n" +
 "		.buddy { font-variant: small-caps; color: blue; float: left; margin-right: 5px; }\n" +
-"		p { margin: 0 5px; }\n" +
+"		p { margin: 0 5px; word-wrap: break-word; }\n" +
 "		.janice { background-position: 0px -144px !important; }\n" +
 "		.frieda { background-position: 0px -48px !important; }\n" +
 "		.paola { background-position: 0px -288px !important; }\n" +
