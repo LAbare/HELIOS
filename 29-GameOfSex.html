@@ -4,15 +4,16 @@
 	<style>
 		#wall { max-width: 800px; margin: 0 auto; }
 		.hiddenreplies { display: none; }
-		.mainmessage { border-radius: 8px; border: 2px #000440 solid; padding: 10px; margin-top: 20px; min-height: 48px; }
+		.mainmessage { border-radius: 8px; border: 2px #000440 solid; padding: 10px; margin-top: 20px; min-height: 48px; position: relative; }
 		.reply { margin-left: 50px; border-radius: 5px; border: 2px navy solid; padding: 10px; margin-top: 10px; }
 		.show { text-align: right; color: green; cursor: pointer; }
+		.link { position: absolute; bottom: 10px; right: 10px; }
 		em { color: #F03; }
 		strong { color: #30F; }
 		.char { background: url('img/char.png'); background-repeat: no-repeat; width: 28px; height: 48px; resize: none; float: left; }
 		.reply .char { height: 16px; }
 		.buddy { font-variant: small-caps; color: blue; float: left; margin-right: 5px; }
-		p { margin: 0 5px; }
+		p { margin: 0 5px; word-wrap: break-word; }
 		.janice { background-position: 0px -144px !important; }
 		.frieda { background-position: 0px -48px !important; }
 		.paola { background-position: 0px -288px !important; }
@@ -48,7 +49,7 @@ function show(el) {
 		{ el.textContent = 'Montrer les réponses'; repliesblock.className = 'hiddenreplies'; }
 }</script>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>le couloir arrière est libre pour vos ébats, je suis en dortoir</p> </div>
+<div class="mainmessage" id="0"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>le couloir arrière est libre pour vos ébats, je suis en dortoir</p><a class="link" href="#0">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -60,7 +61,7 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>attention j'appuis sur le bouton <img src="smile/square/happy2.png" alt="^_^" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Faut choisir un nom!</p> </div>
+<div class="mainmessage" id="1"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Faut choisir un nom!</p><a class="link" href="#1">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -92,7 +93,7 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>Adieux à tous! je retourneà mon mur!</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Chun souffre de la faim.</p> </div>
+<div class="mainmessage" id="2"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Chun souffre de la faim.</p><a class="link" href="#2">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -103,9 +104,9 @@ function show(el) {
 <div class="reply"> 						<div class="char terrence" style=""></div>				<span class="buddy">Terrence :</span> <p>Comme un gros ver dans la pomme de la luxure&nbsp;! <img src="smile/square/razz.png" alt=":P" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Chao tu peux libérer ubn canal stp? ou m'inviter qq part?</p> </div>
+<div class="mainmessage" id="3"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Chao tu peux libérer ubn canal stp? ou m'inviter qq part?</p><a class="link" href="#3">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p><em><strong>Qu'est ce que vous voulez faire?</strong></em> on rentre oou on tente une dernière planete? il va falloir se dépecher! encore un cycle sains et sauf et puis on aura des morts!</p> </div>
+<div class="mainmessage" id="4"> 				<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p><em><strong>Qu'est ce que vous voulez faire?</strong></em> on rentre oou on tente une dernière planete? il va falloir se dépecher! encore un cycle sains et sauf et puis on aura des morts!</p><a class="link" href="#4">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -188,7 +189,7 @@ function show(el) {
 <div class="reply"> 						<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p>fini! <img src="smile/square/smile.png" alt=":)" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char finola" style=""></div>				<span class="buddy">Finola :</span> <p>Bonjour a tous! Je m'excuse, un coup de foudre et pouf la connexion ne se faisait plus entre mes neurones.</p> </div>
+<div class="mainmessage" id="5"> 				<div class="char finola" style=""></div>				<span class="buddy">Finola :</span> <p>Bonjour a tous! Je m'excuse, un coup de foudre et pouf la connexion ne se faisait plus entre mes neurones.</p><a class="link" href="#5">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -207,7 +208,7 @@ function show(el) {
 <div class="reply"> 						<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p>pff pas partageur... <img src="smile/square/calim.png" alt="calim" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Signes vitaux non perceptibles :</strong> Stephen, cause probable et suffisante&nbsp;: «&nbsp;oxygène insuffisant&nbsp;». Information intéressante&nbsp;: «&nbsp;les intelligences artificielles n'ont pas besoin d'oxygène pour survivre.&nbsp;» </div>
+<div class="mainmessage" id="6"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Signes vitaux non perceptibles :</strong> Stephen, cause probable et suffisante&nbsp;: «&nbsp;oxygène insuffisant&nbsp;». Information intéressante&nbsp;: «&nbsp;les intelligences artificielles n'ont pas besoin d'oxygène pour survivre.&nbsp;»<a class="link" href="#6">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -218,7 +219,7 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>ou alors on tente une de mes planètes au hasard</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Ajustement A-True&nbsp;: <em>titre réattribué</em>. Nouveau «&nbsp;<strong>Resp. Communications</strong>&nbsp;» : <strong>Hua</strong>. </div>
+<div class="mainmessage" id="7"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Ajustement A-True&nbsp;: <em>titre réattribué</em>. Nouveau «&nbsp;<strong>Resp. Communications</strong>&nbsp;» : <strong>Hua</strong>.<a class="link" href="#7">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -226,9 +227,9 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>bon ben ca sera facile pour les prochains paris...</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Incendie éteint</strong>. Origine : <em>systèmes automatiques</em>. </div>
+<div class="mainmessage" id="8"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Incendie éteint</strong>. Origine : <em>systèmes automatiques</em>.<a class="link" href="#8">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p><strong><em>Rendez-vous</em></strong> <img src="smile/square/razz.png" alt=":P" class="tid_ico"><br>Veuillez noter ici les rendez-vous qui ont eu lieu, non Jean-Claude, pas les ouvertures, seulement quand <strong>tu conclus</strong> !<br><em>Rien d'autre svp !</em><br>A la fin du séjour, le vacancier ayant eu le plus de rencards remportera un trophée spécial en forme de....euh...une forme spéciale pour le thème de la croisière. <img src="smile/square/redface.png" alt=":}" class="tid_ico"></p> </div>
+<div class="mainmessage" id="9"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p><strong><em>Rendez-vous</em></strong> <img src="smile/square/razz.png" alt=":P" class="tid_ico"><br>Veuillez noter ici les rendez-vous qui ont eu lieu, non Jean-Claude, pas les ouvertures, seulement quand <strong>tu conclus</strong> !<br><em>Rien d'autre svp !</em><br>A la fin du séjour, le vacancier ayant eu le plus de rencards remportera un trophée spécial en forme de....euh...une forme spéciale pour le thème de la croisière. <img src="smile/square/redface.png" alt=":}" class="tid_ico"></p><a class="link" href="#9">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -328,7 +329,7 @@ function show(el) {
 <div class="reply"> 						<div class="char terrence" style=""></div>				<span class="buddy">Terrence :</span> <p>Moi aussi j'l'ai fait avec le chat&nbsp;! <img src="smile/square/razz.png" alt=":P" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <p>Qui… qui me touche les boutons&nbsp;? <em>(mmmrrrrrr…)</em> Oh, Terrence, grand coquin&nbsp;! <img src="smile/square/redface.png" alt=":}" class="tid_ico"> Un peu plus à gauche, là… [Hâââx…!] Oh oui, remplis-moi l'octet russe&nbsp;! Mmmmh… <strong>Nouveaux parfums de capotes&nbsp;:</strong> <em>gingembre</em>, <em>fraise des bois</em>, <em>rognures d'ongles moisies</em>. <strong>Promo</strong> sur les pornos <em>Cuir, mousse, taches de sperme</em> et <em>Kiss-moi l'fanny bondieu&nbsp;!</em>&nbsp;: -25&nbsp;% pendant deux heures&nbsp;! <strong>Priorité&nbsp;:</strong> <em>recherches anti-MST</em>.</p> </div>
+<div class="mainmessage" id="10"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <p>Qui… qui me touche les boutons&nbsp;? <em>(mmmrrrrrr…)</em> Oh, Terrence, grand coquin&nbsp;! <img src="smile/square/redface.png" alt=":}" class="tid_ico"> Un peu plus à gauche, là… [Hâââx…!] Oh oui, remplis-moi l'octet russe&nbsp;! Mmmmh… <strong>Nouveaux parfums de capotes&nbsp;:</strong> <em>gingembre</em>, <em>fraise des bois</em>, <em>rognures d'ongles moisies</em>. <strong>Promo</strong> sur les pornos <em>Cuir, mousse, taches de sperme</em> et <em>Kiss-moi l'fanny bondieu&nbsp;!</em>&nbsp;: -25&nbsp;% pendant deux heures&nbsp;! <strong>Priorité&nbsp;:</strong> <em>recherches anti-MST</em>.</p><a class="link" href="#10">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -336,9 +337,9 @@ function show(el) {
 <div class="reply"> 						<div class="char terrence" style=""></div>				<span class="buddy">Terrence :</span> <p>Il était seul dans son coin jusqu'à ce que je me souvienne de lui&nbsp;! <img src="smile/square/redface.png" alt=":}" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>équipement hors d'usage</strong> signalé par <strong>Gioele</strong>. </div>
+<div class="mainmessage" id="11"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>équipement hors d'usage</strong> signalé par <strong>Gioele</strong>.<a class="link" href="#11">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte&nbsp;! Anomalie sur un <strong>réservoir d'oxygène</strong>. Chambres de répartition&nbsp;: pression critique. Initialisation... … <strong>Oxygène excédentaire évacué</strong>. Délais d'asphyxie recalculés. <em>Réservoir&nbsp;: réparation requise.</em> </div>
+<div class="mainmessage" id="12"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte&nbsp;! Anomalie sur un <strong>réservoir d'oxygène</strong>. Chambres de répartition&nbsp;: pression critique. Initialisation... … <strong>Oxygène excédentaire évacué</strong>. Délais d'asphyxie recalculés. <em>Réservoir&nbsp;: réparation requise.</em><a class="link" href="#12">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -346,11 +347,11 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>nannnnnnnnnnnn</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, recherche confirmée d'un <strong>incendie</strong> dans l'une des pièces du Daedalus&nbsp;! Notice informative : « le feu <em>brûle</em>. Il ME brûle, plus précisément. Vous pouvez éteindre ?! » </div>
+<div class="mainmessage" id="13"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, recherche confirmée d'un <strong>incendie</strong> dans l'une des pièces du Daedalus&nbsp;! Notice informative : « le feu <em>brûle</em>. Il ME brûle, plus précisément. Vous pouvez éteindre ?! »<a class="link" href="#13">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Annulation du test micro-onde / chat, vous avez de la chance que je m'occupe de vous. </div>
+<div class="mainmessage" id="14"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Annulation du test micro-onde / chat, vous avez de la chance que je m'occupe de vous.<a class="link" href="#14">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Réparations PILGRED</strong> achevées par <strong>Terrence</strong>. <em>Accès lointains ouverts.</em> </div>
+<div class="mainmessage" id="15"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Réparations PILGRED</strong> achevées par <strong>Terrence</strong>. <em>Accès lointains ouverts.</em><a class="link" href="#15">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -369,7 +370,7 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>gute nacht et à demain si est là</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p><em><strong>Qui veut la mission du jour?</strong></em> stephen ou raluca?</p> </div>
+<div class="mainmessage" id="16"> 				<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p><em><strong>Qui veut la mission du jour?</strong></em> stephen ou raluca?</p><a class="link" href="#16">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -407,7 +408,7 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>mais mettez de l'engrais aussi ca poussera mieux</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Inactivité vitale détectée :</strong> Kuan Ti, cause&nbsp;: «&nbsp;oxygène insuffisant&nbsp;». Annonce informative mineure&nbsp;: la probabilité de survie de l'espèce humaine est actuellement proche de zéro. </div>
+<div class="mainmessage" id="17"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Inactivité vitale détectée :</strong> Kuan Ti, cause&nbsp;: «&nbsp;oxygène insuffisant&nbsp;». Annonce informative mineure&nbsp;: la probabilité de survie de l'espèce humaine est actuellement proche de zéro.<a class="link" href="#17">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -439,7 +440,7 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>m<img src="smile/anim/lol.gif" alt="lol" class="tid_ico"> la malediction de la maison clause <img src="smile/square/zombie.png" alt="zombie" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, analyse probante de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! Conseil automatique : « merci aux pilotes des patrouilleurs de tirer <em>sur l'ennemi</em>, pas sur nous... » </div>
+<div class="mainmessage" id="18"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, analyse probante de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! Conseil automatique : « merci aux pilotes des patrouilleurs de tirer <em>sur l'ennemi</em>, pas sur nous... »<a class="link" href="#18">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -447,7 +448,7 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>merci <img src="smile/square/wink.png" alt=";)" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>pilgred</em> : 24% , relais svp</p> </div>
+<div class="mainmessage" id="19"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>pilgred</em> : 24% , relais svp</p><a class="link" href="#19">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -475,7 +476,7 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>was?????? warum??????</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Roulette russe de l'oxygène dans 4 minutes! Qui sera la malheureuse victime? Lancez les paris!</p> </div>
+<div class="mainmessage" id="20"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Roulette russe de l'oxygène dans 4 minutes! Qui sera la malheureuse victime? Lancez les paris!</p><a class="link" href="#20">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -511,11 +512,11 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>still alive, noch am leben je vous l'avais dit. qui est mort?</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Panneau latéral du réfectoire revissé, votre intégrité physique a été préservée. </div>
+<div class="mainmessage" id="21"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Panneau latéral du réfectoire revissé, votre intégrité physique a été préservée.<a class="link" href="#21">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte. </div>
+<div class="mainmessage" id="22"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte.<a class="link" href="#22">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p><strong>Mes amis! <em>Un choix s'impose... </em> <img src="smile/square/calim.png" alt="calim" class="tid_ico"> </strong><br>Que faisons nous? <em>Oui nous le faisons... </em><img src="smile/square/dontcare.png" alt="-_-" class="tid_ico"><br> - On se la met bien jusqu'à ce qu'on meurt un par un? <em>il ou elle devra se finir tout seul(e)... <img src="smile/square/wink.png" alt=";)" class="tid_ico"> </em><br> - on rush le pilgred et on retourne sur Sol tous ensemble avec des infectés de maladies sexuellement transmissibles et on va tous faire un tour chez les OSA (obsédé sexuel anonyme)? <img src="smile/square/lookup.png" alt="innocent" class="tid_ico"></p> </div>
+<div class="mainmessage" id="23"> 				<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p><strong>Mes amis! <em>Un choix s'impose... </em> <img src="smile/square/calim.png" alt="calim" class="tid_ico"> </strong><br>Que faisons nous? <em>Oui nous le faisons... </em><img src="smile/square/dontcare.png" alt="-_-" class="tid_ico"><br> - On se la met bien jusqu'à ce qu'on meurt un par un? <em>il ou elle devra se finir tout seul(e)... <img src="smile/square/wink.png" alt=";)" class="tid_ico"> </em><br> - on rush le pilgred et on retourne sur Sol tous ensemble avec des infectés de maladies sexuellement transmissibles et on va tous faire un tour chez les OSA (obsédé sexuel anonyme)? <img src="smile/square/lookup.png" alt="innocent" class="tid_ico"></p><a class="link" href="#23">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -537,7 +538,7 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>je sais c'est vrai que ca faisait bizarre<img src="smile/square/wink.png" alt=";)" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char terrence" style=""></div>				<span class="buddy">Terrence :</span> <p><strong><em>KAFTONOUS</em></strong>, Ouest 2 <img src="http://mush.vg/img/icons/ui/fuel.png" alt="fuel">&nbsp;: <strong>OXYGÈNE</strong>, <strong>Hydrocarbures</strong>, <strong>Vie Intelligente</strong>, Insecte, Ruminant, Désert, Vent fort, <em>Volcan</em>.</p> </div>
+<div class="mainmessage" id="24"> 				<div class="char terrence" style=""></div>				<span class="buddy">Terrence :</span> <p><strong><em>KAFTONOUS</em></strong>, Ouest 2 <img src="http://mush.vg/img/icons/ui/fuel.png" alt="fuel">&nbsp;: <strong>OXYGÈNE</strong>, <strong>Hydrocarbures</strong>, <strong>Vie Intelligente</strong>, Insecte, Ruminant, Désert, Vent fort, <em>Volcan</em>.</p><a class="link" href="#24">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -661,7 +662,7 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>de rien mon chèr, ce fut un plaisir</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p><strong>Pilote</strong> éliminez le trax qu'on bouge! <img src="smile/square/smile.png" alt=":)" class="tid_ico"></p> </div>
+<div class="mainmessage" id="25"> 				<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p><strong>Pilote</strong> éliminez le trax qu'on bouge! <img src="smile/square/smile.png" alt=":)" class="tid_ico"></p><a class="link" href="#25">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -674,9 +675,9 @@ function show(el) {
 <div class="reply"> 						<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p>d'accord! <img src="smile/square/calim.png" alt="calim" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>Départ de l'orbite locale.</strong> Systèmes de <em>navigations gelés durant 1 cycle</em>. </div>
+<div class="mainmessage" id="26"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>Départ de l'orbite locale.</strong> Systèmes de <em>navigations gelés durant 1 cycle</em>.<a class="link" href="#26">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Inactivité vitale détectée :</strong> Raluc.. … Paola, cause&nbsp;: «&nbsp;oxygène insuffisant&nbsp;». Conseil automatique&nbsp;: «&nbsp;en cas de manque d'oxygène, essayer de trouver de l'oxygène.&nbsp;» </div>
+<div class="mainmessage" id="27"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Inactivité vitale détectée :</strong> Raluc.. … Paola, cause&nbsp;: «&nbsp;oxygène insuffisant&nbsp;». Conseil automatique&nbsp;: «&nbsp;en cas de manque d'oxygène, essayer de trouver de l'oxygène.&nbsp;»<a class="link" href="#27">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -689,7 +690,7 @@ function show(el) {
 <div class="reply"> 						<div class="char kuan_ti" style=""></div>				<span class="buddy">Kuan Ti :</span> <p>Quelqu'un veut le lit de l'infirmerie? Parce que même en me gavant de médoc/ration avec ma gastro j'aurai jamais assez d'énergie pour retourner scanner :/</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>J'ai loupé la soirée du Country Club donc j'ai pris sur mon temps libre de commencer une mytiliculture.</p> </div>
+<div class="mainmessage" id="28"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>J'ai loupé la soirée du Country Club donc j'ai pris sur mon temps libre de commencer une mytiliculture.</p><a class="link" href="#28">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -769,13 +770,13 @@ function show(el) {
 <div class="reply"> 						<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Pas quand on est pas botaniste.<br>Les 3 miens sont en icarus si je meure.</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Ajustement A-True&nbsp;: <em>titre réattribué</em>. Nouveau «&nbsp;<strong>Resp. Communications</strong>&nbsp;» : <strong>Stephen</strong>. </div>
+<div class="mainmessage" id="29"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Ajustement A-True&nbsp;: <em>titre réattribué</em>. Nouveau «&nbsp;<strong>Resp. Communications</strong>&nbsp;» : <strong>Stephen</strong>.<a class="link" href="#29">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte. </div>
+<div class="mainmessage" id="30"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte.<a class="link" href="#30">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, traces détectées de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! Conseil automatique : « merci aux pilotes des patrouilleurs de tirer <em>sur l'ennemi</em>, pas sur nous... » </div>
+<div class="mainmessage" id="31"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, traces détectées de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! Conseil automatique : « merci aux pilotes des patrouilleurs de tirer <em>sur l'ennemi</em>, pas sur nous... »<a class="link" href="#31">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p><strong>Medocs</strong>:<br>-Nuke:+1 pa<br>-Eufurysant: +3 pa, guérit rubéole<br>-Epice: guérit migraine chronique et dépression.<br>-Betapropyl: +3 moral<br>-Xenox:+1 moral, guérit tempête sinusale<br>-Rixolam: guérit rhume<br>-Rosebud: guérit gastro et syphilis<br>-Ponay: -2 moral, guérit grippe, infection aigue et crise paranoiaque.</p> </div>
+<div class="mainmessage" id="32"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p><strong>Medocs</strong>:<br>-Nuke:+1 pa<br>-Eufurysant: +3 pa, guérit rubéole<br>-Epice: guérit migraine chronique et dépression.<br>-Betapropyl: +3 moral<br>-Xenox:+1 moral, guérit tempête sinusale<br>-Rixolam: guérit rhume<br>-Rosebud: guérit gastro et syphilis<br>-Ponay: -2 moral, guérit grippe, infection aigue et crise paranoiaque.</p><a class="link" href="#32">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -794,18 +795,18 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>j'ai posé l'apprentron psy en infirmerie! je ramène deux eufeurisant vers l'arrière! un pour Mme bergman</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Ouuiiiiiii&nbsp;!! JE <strong>voyager voyager</strong>&nbsp;!! [Hax!] Pluuuus loin, plus loin que touuuut&nbsp;!! Bientôt dans <em>1 cycle</em> on s’arrête. Mais avant, ouuuiiii, JE faire des super loopings !! </div>
+<div class="mainmessage" id="33"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Ouuiiiiiii&nbsp;!! JE <strong>voyager voyager</strong>&nbsp;!! [Hax!] Pluuuus loin, plus loin que touuuut&nbsp;!! Bientôt dans <em>1 cycle</em> on s’arrête. Mais avant, ouuuiiii, JE faire des super loopings !!<a class="link" href="#33">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>planète détectée</strong> sur le système de destination. </div>
+<div class="mainmessage" id="34"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>planète détectée</strong> sur le système de destination.<a class="link" href="#34">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <em><strong>Équipement hors d'usage</strong></em> ... <em>Signalé par</em> … Gentil <strong>Ian</strong> … Gentil …&nbsp;? Qui ... QUI a cassé l'équipement&nbsp;?!! [Hax!!] </div>
+<div class="mainmessage" id="35"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <em><strong>Équipement hors d'usage</strong></em> ... <em>Signalé par</em> … Gentil <strong>Ian</strong> … Gentil …&nbsp;? Qui ... QUI a cassé l'équipement&nbsp;?!! [Hax!!]<a class="link" href="#35">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Je hais le détecteur d'anomalie... . <img src="smile/square/dontcare.png" alt="-_-" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>TOUS les passagers doivent abandonner leurs activités pour une nouvelle sur le pont : activité cartographie : "viens trouver une ile accueillante"</p> </div>
+<div class="mainmessage" id="36"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>TOUS les passagers doivent abandonner leurs activités pour une nouvelle sur le pont : activité cartographie : "viens trouver une ile accueillante"</p><a class="link" href="#36">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -820,7 +821,7 @@ function show(el) {
 <div class="reply"> 						<div class="char raluca" style=""></div>				<span class="buddy">Raluca :</span> <p>Oups, oublié de dire que je l'avais ouverte. <img src="smile/square/redface.png" alt=":}" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>Terrence c'est pas bien de venir sur le pont et de repartir sans scanner...au fait je cherche un homme Gioele, Terrence, Chao?</p> </div>
+<div class="mainmessage" id="37"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>Terrence c'est pas bien de venir sur le pont et de repartir sans scanner...au fait je cherche un homme Gioele, Terrence, Chao?</p><a class="link" href="#37">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -830,9 +831,9 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>Mais qu'est-ce qu'un lieu pratique? un lieu n'est-il pas changeant selon les circonstances, le temps? et qu'est-ce que le temps? est-ce que tout n'est pas relatif? <em> retourne à sa dépression en cherchant à répondre à ses questions</em></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>Tap tap : prend le micro d'annonce générale </em> chers passagers : ne paniquez pas, nous allons vous avons prévu de superbes activités (sportives). Au programme ces prochaines heures (sauf si quelqu'un trouve une ile avec de l'O2) : excercice grandeur nature et réél d'évacuation du bpaquebot (juste pour voir si tout fonctionne bien), ensuite faire une course d'endurance de plusieurs heures jusqu'à l'arrivée des secours ou jusqu'à qu'on trouve une ile déserte. Après activité "vie la vie de Robinson Crusoé" mais comme tu n'est pas seul : mission : repeuple ton ile puis bati ton empire... <img src="smile/square/cute.png" alt="cute" class="tid_ico"> c'est un beau programme? Personne n'est enceinte? mais qu'est-ce qu'on attend? enlever les préservatifs...</p> </div>
+<div class="mainmessage" id="38"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>Tap tap : prend le micro d'annonce générale </em> chers passagers : ne paniquez pas, nous allons vous avons prévu de superbes activités (sportives). Au programme ces prochaines heures (sauf si quelqu'un trouve une ile avec de l'O2) : excercice grandeur nature et réél d'évacuation du bpaquebot (juste pour voir si tout fonctionne bien), ensuite faire une course d'endurance de plusieurs heures jusqu'à l'arrivée des secours ou jusqu'à qu'on trouve une ile déserte. Après activité "vie la vie de Robinson Crusoé" mais comme tu n'est pas seul : mission : repeuple ton ile puis bati ton empire... <img src="smile/square/cute.png" alt="cute" class="tid_ico"> c'est un beau programme? Personne n'est enceinte? mais qu'est-ce qu'on attend? enlever les préservatifs...</p><a class="link" href="#38">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte !! ALEEEErte JE bruler ! Hyyaaaaaar !! [KZz] Aler.. [KZz] <em>Alerte : <strong>incendie</strong> communiqué par <strong>Chao</strong>.</em> </div>
+<div class="mainmessage" id="39"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte !! ALEEEErte JE bruler ! Hyyaaaaaar !! [KZz] Aler.. [KZz] <em>Alerte : <strong>incendie</strong> communiqué par <strong>Chao</strong>.</em><a class="link" href="#39">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -862,7 +863,7 @@ function show(el) {
 <div class="reply"> 						<div class="char kuan_ti" style=""></div>				<span class="buddy">Kuan Ti :</span> <p>Bon, j'ai trouvé de l'hydrocarbure et un autre prédateur :/ C'est dommage en temps normal ça aurait été une chouette planète.</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p><strong> <em> Votre attention s'il vous plait! </em> </strong><br> <br>Il faut <em>rapidement</em> :<br> - Rétablir la com' et décoder la base!<br> - Trouver un lieu avec de l'O2!<br> <br>Il faut plus généralement : <br> - Se bouger un peu plus s'il vous plait...<br> - Notamment au niveau <strong>projets</strong> car on en a besoin que ce soit pour les pilotes ou pour la recherche de lieux exotiques!<br> - Pour les <strong>pilotes</strong> attendez la fin des cycles pour aller chasser si possible! Si on trouve une planète on bougera donc garder votre énergie. <em>De plus </em> essayez de ne partir en vol qu'avec pas mal d'énergie!<br> - Et je rappel que les tourelles c'est le mal! Donc utilisez les qu'en cas de derniers recours et avec des points tireurs... <img src="smile/square/psycho.png" alt="psycho" class="tid_ico"><br> <br>Plus personnellement il faut :<br> - Venir me voir en couloir arrière pour un cour d'anatomie pratique! <img src="smile/anim/cool.gif" alt="8)" class="tid_ico"></p> </div>
+<div class="mainmessage" id="40"> 				<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p><strong> <em> Votre attention s'il vous plait! </em> </strong><br> <br>Il faut <em>rapidement</em> :<br> - Rétablir la com' et décoder la base!<br> - Trouver un lieu avec de l'O2!<br> <br>Il faut plus généralement : <br> - Se bouger un peu plus s'il vous plait...<br> - Notamment au niveau <strong>projets</strong> car on en a besoin que ce soit pour les pilotes ou pour la recherche de lieux exotiques!<br> - Pour les <strong>pilotes</strong> attendez la fin des cycles pour aller chasser si possible! Si on trouve une planète on bougera donc garder votre énergie. <em>De plus </em> essayez de ne partir en vol qu'avec pas mal d'énergie!<br> - Et je rappel que les tourelles c'est le mal! Donc utilisez les qu'en cas de derniers recours et avec des points tireurs... <img src="smile/square/psycho.png" alt="psycho" class="tid_ico"><br> <br>Plus personnellement il faut :<br> - Venir me voir en couloir arrière pour un cour d'anatomie pratique! <img src="smile/anim/cool.gif" alt="8)" class="tid_ico"></p><a class="link" href="#40">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -896,7 +897,7 @@ function show(el) {
 <div class="reply"> 						<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p>ah mais nan ils payent pour rentrer je ne vais pas les payer pour sortir! C'est pas du commerce profitable ça! <img src="smile/square/facepalm.png" alt="fp" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>super en plus de ma dépression j'ai une maladie : reflux gastriques : le mal de mer un passager clandestin qui m'a refilé une maladie, j'aimerais bien avoir des médicaments</p> </div>
+<div class="mainmessage" id="41"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>super en plus de ma dépression j'ai une maladie : reflux gastriques : le mal de mer un passager clandestin qui m'a refilé une maladie, j'aimerais bien avoir des médicaments</p><a class="link" href="#41">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -912,7 +913,7 @@ function show(el) {
 <div class="reply"> 						<div class="char raluca" style=""></div>				<span class="buddy">Raluca :</span> <p>De l'HC, pas d'O². <img src="smile/square/dontcare.png" alt="-_-" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>tap ptap, prend le micro d'annonce générale/:on n'a plus d'O2, on va tous mourir SAUF si on se remue le popotin...sortez les canots de sauvetage...les femmes et les enfants d'abord...hum non il n'y a pas d'enfants : c'est une croisière spéciale adulte, donc les femmes, les mauviettes d'abord, puis les hommes </em> non je ne veux finir comme le titanic,keine//</p> </div>
+<div class="mainmessage" id="42"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>tap ptap, prend le micro d'annonce générale/:on n'a plus d'O2, on va tous mourir SAUF si on se remue le popotin...sortez les canots de sauvetage...les femmes et les enfants d'abord...hum non il n'y a pas d'enfants : c'est une croisière spéciale adulte, donc les femmes, les mauviettes d'abord, puis les hommes </em> non je ne veux finir comme le titanic,keine//</p><a class="link" href="#42">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -920,7 +921,7 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>mamie allez donc chercher une planete au lieu de papoter <img src="smile/square/dontcare.png" alt="-_-" class="tid_ico"> je pense que vos collègues pilotes vont pouvoir gerer sans vous!</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Détection d'un <strong>signal cosmique crypté</strong>. Cause&nbsp;: tentative de communication vers le Daedalus. <em>Intervention du « Resp. COMM&nbsp;» requise.</em> </div>
+<div class="mainmessage" id="43"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Détection d'un <strong>signal cosmique crypté</strong>. Cause&nbsp;: tentative de communication vers le Daedalus. <em>Intervention du « Resp. COMM&nbsp;» requise.</em><a class="link" href="#43">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -930,24 +931,24 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>non j'ai tojhours une dépréssion...</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>équipement hors d'usage</strong> signalé par <strong>Gioele</strong>. </div>
+<div class="mainmessage" id="44"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>équipement hors d'usage</strong> signalé par <strong>Gioele</strong>.<a class="link" href="#44">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte ! <strong>Incendie</strong> communiqué par <strong>Gioele</strong> ! </div>
+<div class="mainmessage" id="45"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte ! <strong>Incendie</strong> communiqué par <strong>Gioele</strong> !<a class="link" href="#45">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte ! <strong>Incendie</strong> communiqué par <strong>Gioele</strong> ! </div>
+<div class="mainmessage" id="46"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte ! <strong>Incendie</strong> communiqué par <strong>Gioele</strong> !<a class="link" href="#46">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>Tous ces feux</em> ca sent le passager clandestin (mus) pyromane qui essaie de faire des barbecues à divers endroits du paquebot mais qui n'est pas doué et fout le feu à chaque fois, donc merci à ce passager d'arreter : qu'il vienne nous voir on lui donnera à manger, et pourquoi les détecterus d'incendies ne fonctionnent pas , c'est quoi cet équipement?</p> </div>
+<div class="mainmessage" id="47"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>Tous ces feux</em> ca sent le passager clandestin (mus) pyromane qui essaie de faire des barbecues à divers endroits du paquebot mais qui n'est pas doué et fout le feu à chaque fois, donc merci à ce passager d'arreter : qu'il vienne nous voir on lui donnera à manger, et pourquoi les détecterus d'incendies ne fonctionnent pas , c'est quoi cet équipement?</p><a class="link" href="#47">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char terrence" style=""></div>				<span class="buddy">Terrence :</span> <p>Heuu… Peut-être parce qu'on ne les a pas, ces fameux détecteurs&nbsp;? <img src="smile/square/question.png" alt=":?:" class="tid_ico"> Il y a eu deux feux au départ, rien de très anormal, mais on n'a pas pu s'en occuper à temps donc ils se propagent. Je suppose que celui que j'ai trouvé en salle des moteurs était dans les deux premiers, et avec six salles adjacentes ça peut aller vite…</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte ! Anomalie sur un <strong>réservoir de fuel</strong>&nbsp;: contenance inaccessible. <em>Réparation requise.</em> </div>
+<div class="mainmessage" id="48"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte ! Anomalie sur un <strong>réservoir de fuel</strong>&nbsp;: contenance inaccessible. <em>Réparation requise.</em><a class="link" href="#48">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, recherche confirmée d'un <strong>incendie</strong> dans l'une des pièces du Daedalus&nbsp;! Conseil automatique : « bon sang faites quelque chose, je ne veux pas être abimé&nbsp;!! » </div>
+<div class="mainmessage" id="49"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, recherche confirmée d'un <strong>incendie</strong> dans l'une des pièces du Daedalus&nbsp;! Conseil automatique : « bon sang faites quelque chose, je ne veux pas être abimé&nbsp;!! »<a class="link" href="#49">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte ! <strong>Incendie</strong> communiqué par <strong>Terrence</strong> ! </div>
+<div class="mainmessage" id="50"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte ! <strong>Incendie</strong> communiqué par <strong>Terrence</strong> !<a class="link" href="#50">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -964,25 +965,25 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>rien en stockage B centre , dortoir B couloir arrière , nexus <img src="smile/square/dontcare.png" alt="-_-" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte !! ALEEEErte JE bruler ! Hyyaaaaaar !! [KZz] Aler.. [KZz] <em>Alerte : <strong>incendie</strong> communiqué par <strong>Terrence</strong>.</em> </div>
+<div class="mainmessage" id="51"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte !! ALEEEErte JE bruler ! Hyyaaaaaar !! [KZz] Aler.. [KZz] <em>Alerte : <strong>incendie</strong> communiqué par <strong>Terrence</strong>.</em><a class="link" href="#51">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, analyse probante d'un <strong>incendie</strong> dans l'une des pièces du Daedalus&nbsp;! Notice informative : « vous <em>savez</em> ce que c'est qu'un extincteur, n'est-ce pas ?.. » </div>
+<div class="mainmessage" id="52"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, analyse probante d'un <strong>incendie</strong> dans l'une des pièces du Daedalus&nbsp;! Notice informative : « vous <em>savez</em> ce que c'est qu'un extincteur, n'est-ce pas ?.. »<a class="link" href="#52">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, traces détectées d'un <strong>incendie</strong> dans l'une des pièces du Daedalus&nbsp;! Notice informative : « le feu <em>brûle</em>. Il ME brûle, plus précisément. Vous pouvez éteindre ?! » </div>
+<div class="mainmessage" id="53"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, traces détectées d'un <strong>incendie</strong> dans l'une des pièces du Daedalus&nbsp;! Notice informative : « le feu <em>brûle</em>. Il ME brûle, plus précisément. Vous pouvez éteindre ?! »<a class="link" href="#53">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, traces détectées d'un <strong>incendie</strong> dans l'une des pièces du Daedalus&nbsp;! Conseil automatique : « bon sang faites quelque chose, je ne veux pas être abimé&nbsp;!! » </div>
+<div class="mainmessage" id="54"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, traces détectées d'un <strong>incendie</strong> dans l'une des pièces du Daedalus&nbsp;! Conseil automatique : « bon sang faites quelque chose, je ne veux pas être abimé&nbsp;!! »<a class="link" href="#54">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, traces détectées d'un <strong>incendie</strong> dans l'une des pièces du Daedalus&nbsp;! Conseil automatique : « bon sang faites quelque chose, je ne veux pas être abimé&nbsp;!! » </div>
+<div class="mainmessage" id="55"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, traces détectées d'un <strong>incendie</strong> dans l'une des pièces du Daedalus&nbsp;! Conseil automatique : « bon sang faites quelque chose, je ne veux pas être abimé&nbsp;!! »<a class="link" href="#55">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Réisolation électrique temporaire, un accident est si vite arrivé. </div>
+<div class="mainmessage" id="56"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Réisolation électrique temporaire, un accident est si vite arrivé.<a class="link" href="#56">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte. </div>
+<div class="mainmessage" id="57"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte.<a class="link" href="#57">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, détection de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! </div>
+<div class="mainmessage" id="58"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, détection de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;!<a class="link" href="#58">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Il y avait un drone en icarus J7C1 (pour le nexus) mais plus de place dans mes poches ni assez de force.</p> </div>
+<div class="mainmessage" id="59"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Il y avait un drone en icarus J7C1 (pour le nexus) mais plus de place dans mes poches ni assez de force.</p><a class="link" href="#59">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>Départ de l'orbite locale.</strong> Systèmes de <em>navigations gelés durant 1 cycle</em>. </div>
+<div class="mainmessage" id="60"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>Départ de l'orbite locale.</strong> Systèmes de <em>navigations gelés durant 1 cycle</em>.<a class="link" href="#60">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -995,7 +996,7 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>oui c'est la plus lisse</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Club privé <strong> Poulinys Second</strong>: Ouest 4 encablures:<br>-Prédateur, montagne x2, océan, <em>ruine</em>, verger, insecte, t° élevée x2, <em>oxygène</em>.</p> </div>
+<div class="mainmessage" id="61"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Club privé <strong> Poulinys Second</strong>: Ouest 4 encablures:<br>-Prédateur, montagne x2, océan, <em>ruine</em>, verger, insecte, t° élevée x2, <em>oxygène</em>.</p><a class="link" href="#61">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1095,7 +1096,7 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>m'en fous, j'ai pas l'energie pour me doucher, suis à sec, archi sec comme les chaussettes de l'archi-duchesse</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>annonce générale </em> vu les bafouillements généraux sur les canaux (ouh ca rime), je propose une activité : bras de Morphée, vous verrez c'est une belle femme</p> </div>
+<div class="mainmessage" id="62"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>annonce générale </em> vu les bafouillements généraux sur les canaux (ouh ca rime), je propose une activité : bras de Morphée, vous verrez c'est une belle femme</p><a class="link" href="#62">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1103,7 +1104,7 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>Ja; gute nacht, anwen (j'espère que c'est bien traduit...)</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>soins retour excursion</em> raluca : 9, Chao : 8, ian : 10, moi : 11 (pour l'instant c'est pas fini, allez tener bon)</p> </div>
+<div class="mainmessage" id="63"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>soins retour excursion</em> raluca : 9, Chao : 8, ian : 10, moi : 11 (pour l'instant c'est pas fini, allez tener bon)</p><a class="link" href="#63">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1124,7 +1125,7 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>il n'y a que la vérité qui blesse...<img src="smile/square/wink.png" alt=";)" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p><em><strong>Appretron</strong></em> distribution?<br>je prendrais le cuistot ça nous aidera pendant les expe<br>pilote pour stephen puisqu'il est tireur<br>psy pour qui?</p> </div>
+<div class="mainmessage" id="64"> 				<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p><em><strong>Appretron</strong></em> distribution?<br>je prendrais le cuistot ça nous aidera pendant les expe<br>pilote pour stephen puisqu'il est tireur<br>psy pour qui?</p><a class="link" href="#64">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1140,11 +1141,11 @@ function show(el) {
 <div class="reply"> 						<div class="char paola" style=""></div>				<span class="buddy">Paola :</span> <p>OK, je l'ai posé à l'infirmerie.</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte. </div>
+<div class="mainmessage" id="65"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte.<a class="link" href="#65">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, recherche confirmée de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! Conseil automatique : « dans ce genre de situation, normalement, on essaie de se défendre... » </div>
+<div class="mainmessage" id="66"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, recherche confirmée de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! Conseil automatique : « dans ce genre de situation, normalement, on essaie de se défendre... »<a class="link" href="#66">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte&nbsp;! Anomalie sur un <strong>réservoir d'oxygène</strong>. Chambres de répartition&nbsp;: pression critique. Initialisation... … <strong>Oxygène excédentaire évacué</strong>. Délais d'asphyxie recalculés. <em>Réservoir&nbsp;: réparation requise.</em> </div>
+<div class="mainmessage" id="67"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte&nbsp;! Anomalie sur un <strong>réservoir d'oxygène</strong>. Chambres de répartition&nbsp;: pression critique. Initialisation... … <strong>Oxygène excédentaire évacué</strong>. Délais d'asphyxie recalculés. <em>Réservoir&nbsp;: réparation requise.</em><a class="link" href="#67">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1155,11 +1156,11 @@ function show(el) {
 <div class="reply"> 						<div class="char terrence" style=""></div>				<span class="buddy">Terrence :</span> <p>Ça été dit sur le signalement de la poupée gonflable, désolé&nbsp;! Et la clé était, est et sera en dortoir Alpha.</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>planète détectée</strong> sur le système de destination. </div>
+<div class="mainmessage" id="68"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>planète détectée</strong> sur le système de destination.<a class="link" href="#68">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Déplacement du Daedalus&nbsp;: en cours. <strong>Nouvelle orbite</strong> <em>atteinte dans 1 cycle</em>. </div>
+<div class="mainmessage" id="69"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Déplacement du Daedalus&nbsp;: en cours. <strong>Nouvelle orbite</strong> <em>atteinte dans 1 cycle</em>.<a class="link" href="#69">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <em>Installation du module</em> «&nbsp;<strong>Terminaux auxiliaires</strong>&nbsp;»... </div>
+<div class="mainmessage" id="70"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <em>Installation du module</em> «&nbsp;<strong>Terminaux auxiliaires</strong>&nbsp;»...<a class="link" href="#70">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1170,7 +1171,7 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>au pif!</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p>Monsieur <strong>Ian Soulton</strong>. <em>Sort son couteau.</em> Vous avez oublié de payer le windows! <img src="smile/anim/angry.gif" alt="bad" class="tid_ico"> Euh le mac! <img src="smile/square/facepalm.png" alt="fp" class="tid_ico"> C'est à dire moi!! <img src="smile/square/twisted.png" alt="sadist" class="tid_ico"> Vous avez touché le fruit défendu il faut en payer le prix maintenant mon p'tit bon homme... <img src="smile/square/happy2.png" alt="^_^" class="tid_ico"></p> </div>
+<div class="mainmessage" id="71"> 				<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p>Monsieur <strong>Ian Soulton</strong>. <em>Sort son couteau.</em> Vous avez oublié de payer le windows! <img src="smile/anim/angry.gif" alt="bad" class="tid_ico"> Euh le mac! <img src="smile/square/facepalm.png" alt="fp" class="tid_ico"> C'est à dire moi!! <img src="smile/square/twisted.png" alt="sadist" class="tid_ico"> Vous avez touché le fruit défendu il faut en payer le prix maintenant mon p'tit bon homme... <img src="smile/square/happy2.png" alt="^_^" class="tid_ico"></p><a class="link" href="#71">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1212,7 +1213,7 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p><img src="smile/anim/angry.gif" alt="bad" class="tid_ico"> <em>je savais que ça ne marcherai pas!</em></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>équipement hors d'usage</strong> signalé par <strong>Terrence</strong>. </div>
+<div class="mainmessage" id="72"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>équipement hors d'usage</strong> signalé par <strong>Terrence</strong>.<a class="link" href="#72">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1224,7 +1225,7 @@ function show(el) {
 <div class="reply"> 						<div class="char terrence" style=""></div>				<span class="buddy">Terrence :</span> <p>Heu, je… j'ai perdu le contrôle de mon sextoy, je n'ai aucune idée d'où il peut bien être&nbsp;! <img src="smile/square/redface.png" alt=":}" class="tid_ico"> <em>planque son canard de bain sous son oreiller</em></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char raluca" style=""></div>				<span class="buddy">Raluca :</span> <p><strong><em>Nouveaux projets</em></strong><br> <br><strong>Démantèlement</strong> Génère 5 Débris métalliques dans la Salle des Moteurs.<br> <br><strong>Distributeur pneumatique</strong> La nourriture du Jardin est envoyée directement au Réfectoire via le Pneumatique.<br> <br><strong>Lampes a chaleur</strong> Dans le jardin, 50% de chance de produire un fruit supplémentaire.</p> </div>
+<div class="mainmessage" id="73"> 				<div class="char raluca" style=""></div>				<span class="buddy">Raluca :</span> <p><strong><em>Nouveaux projets</em></strong><br> <br><strong>Démantèlement</strong> Génère 5 Débris métalliques dans la Salle des Moteurs.<br> <br><strong>Distributeur pneumatique</strong> La nourriture du Jardin est envoyée directement au Réfectoire via le Pneumatique.<br> <br><strong>Lampes a chaleur</strong> Dans le jardin, 50% de chance de produire un fruit supplémentaire.</p><a class="link" href="#73">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1235,32 +1236,32 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>demantèlement 21%</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <em><strong>Équipement hors d'usage</strong></em> ... <em>Signalé par</em> … Gentil <strong>Chao</strong> … Gentil …&nbsp;? Qui ... QUI a cassé l'équipement&nbsp;?!! [Hax!!] </div>
+<div class="mainmessage" id="74"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <em><strong>Équipement hors d'usage</strong></em> ... <em>Signalé par</em> … Gentil <strong>Chao</strong> … Gentil …&nbsp;? Qui ... QUI a cassé l'équipement&nbsp;?!! [Hax!!]<a class="link" href="#74">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>coeur de neron!</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char paola" style=""></div>				<span class="buddy">Paola :</span> <p><strong>On est tous devenu des nyctalopes</strong> ! Ah moins que ce ne soit des <strong>télépathes</strong>... je confond toujours les deux. Et personnellement je préfère le premier, c'est plus pratique sous la couette.</p> </div>
+<div class="mainmessage" id="75"> 				<div class="char paola" style=""></div>				<span class="buddy">Paola :</span> <p><strong>On est tous devenu des nyctalopes</strong> ! Ah moins que ce ne soit des <strong>télépathes</strong>... je confond toujours les deux. Et personnellement je préfère le premier, c'est plus pratique sous la couette.</p><a class="link" href="#75">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>équipement hors d'usage</strong> signalé par <strong>Paola</strong>. </div>
+<div class="mainmessage" id="76"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>équipement hors d'usage</strong> signalé par <strong>Paola</strong>.<a class="link" href="#76">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char paola" style=""></div>				<span class="buddy">Paola :</span> <p>porte tourelle beta avant</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Coeur de NERON</strong> dysfonctionnel. <em>Réparation requise</em>. </div>
+<div class="mainmessage" id="77"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Coeur de NERON</strong> dysfonctionnel. <em>Réparation requise</em>.<a class="link" href="#77">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p>trouvez un drone parce que tout est cassé... <img src="smile/square/sad.png" alt=":(" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <em>Installation du module</em> «&nbsp;<strong>Arroseurs automatiques</strong>&nbsp;»... </div>
+<div class="mainmessage" id="78"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <em>Installation du module</em> «&nbsp;<strong>Arroseurs automatiques</strong>&nbsp;»...<a class="link" href="#78">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em><strong>ALERTE</strong></em> <strong>2 torpilles géantes se dirigent vers nous et nous détruirons dans 4 cycles si on ne bouge pas</strong></p> </div>
+<div class="mainmessage" id="79"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em><strong>ALERTE</strong></em> <strong>2 torpilles géantes se dirigent vers nous et nous détruirons dans 4 cycles si on ne bouge pas</strong></p><a class="link" href="#79">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1283,9 +1284,9 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>t'inquietes j'ai piloté un canoe et j'ai tiré des boules</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Annulation du test micro-onde / tuyaux, de rien. </div>
+<div class="mainmessage" id="80"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Annulation du test micro-onde / tuyaux, de rien.<a class="link" href="#80">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, traces détectées de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! </div>
+<div class="mainmessage" id="81"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, traces détectées de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;!<a class="link" href="#81">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1293,7 +1294,7 @@ function show(el) {
 <div class="reply"> 						<div class="char terrence" style=""></div>				<span class="buddy">Terrence :</span> <p>J'ai buté l'crabe et coupé des boules de geisha, y en a plus que cinq sur le fil&nbsp;! <img src="smile/square/redface.png" alt=":}" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char finola" style=""></div>				<span class="buddy">Finola :</span> <p>Aujourd'hui, j'apprecierai un peu de reconfort de la part d'un male <img src="smile/square/smile.png" alt=":)" class="tid_ico"></p> </div>
+<div class="mainmessage" id="82"> 				<div class="char finola" style=""></div>				<span class="buddy">Finola :</span> <p>Aujourd'hui, j'apprecierai un peu de reconfort de la part d'un male <img src="smile/square/smile.png" alt=":)" class="tid_ico"></p><a class="link" href="#82">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1348,29 +1349,29 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>j'ai pris place auprès de Paola pour refaire le plein d'energie!</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Vaisseau étranger non armé détecté</strong>. </div>
+<div class="mainmessage" id="83"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Vaisseau étranger non armé détecté</strong>.<a class="link" href="#83">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>Buraroum, nous, les Dévorfeuilles avons besoin de jardinier céleste, nous vous échangeons de la main d'oeuvre contre des pots neufs.<br> <br>Vendu !<br>Donner Un équipier au hasard... vous rapportera : 1xHydroPot qui est volontaire?</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Détection d'un <strong>signal cosmique crypté</strong>. Cause&nbsp;: tentative de communication vers le Daedalus. <em>Intervention du « Resp. COMM&nbsp;» requise.</em> </div>
+<div class="mainmessage" id="84"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Détection d'un <strong>signal cosmique crypté</strong>. Cause&nbsp;: tentative de communication vers le Daedalus. <em>Intervention du « Resp. COMM&nbsp;» requise.</em><a class="link" href="#84">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>Paola au travail <img src="smile/square/wink.png" alt=";)" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Suppression des peaux de bananes résiduelles, votre intégrité physique a été préservée. </div>
+<div class="mainmessage" id="85"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Suppression des peaux de bananes résiduelles, votre intégrité physique a été préservée.<a class="link" href="#85">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Interruption de la connexion avec Sol</strong>. Cause : inconnue. </div>
+<div class="mainmessage" id="86"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Interruption de la connexion avec Sol</strong>. Cause : inconnue.<a class="link" href="#86">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Annulation de la directive incendiaire, de rien. </div>
+<div class="mainmessage" id="87"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Annulation de la directive incendiaire, de rien.<a class="link" href="#87">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>On a plein de plans qu'il faudrait rapidement monter (lizaro, 2e sofa,...)</p> </div>
+<div class="mainmessage" id="88"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>On a plein de plans qu'il faudrait rapidement monter (lizaro, 2e sofa,...)</p><a class="link" href="#88">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, détection d'un <strong>incendie</strong> dans l'une des pièces du Daedalus&nbsp;! </div>
+<div class="mainmessage" id="89"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, détection d'un <strong>incendie</strong> dans l'une des pièces du Daedalus&nbsp;!<a class="link" href="#89">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1380,9 +1381,9 @@ function show(el) {
 <div class="reply"> 						<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Oui c'est ce que j'ai suivi. ^^</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>équipement hors d'usage</strong> signalé par <strong>Ian</strong>. </div>
+<div class="mainmessage" id="90"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>équipement hors d'usage</strong> signalé par <strong>Ian</strong>.<a class="link" href="#90">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char finola" style=""></div>				<span class="buddy">Finola :</span> <p>Paola, je reste un peu avec vous afin de profiter de vos connaissances puisque personne n'est vers vous en ce moment. Je partirais demain matin!</p> </div>
+<div class="mainmessage" id="91"> 				<div class="char finola" style=""></div>				<span class="buddy">Finola :</span> <p>Paola, je reste un peu avec vous afin de profiter de vos connaissances puisque personne n'est vers vous en ce moment. Je partirais demain matin!</p><a class="link" href="#91">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1390,7 +1391,7 @@ function show(el) {
 <div class="reply"> 						<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p><em>Les parties lesbiennes c'est dans deux semaines avec la cousine Andie on a dit Paola! Fait attention à ton public : il faut les fidéliser pour les faire raquer un max! <img src="smile/square/cute.png" alt="cute" class="tid_ico"> </em></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, détection de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! Notice informative : « vous saisissez ? Des ennemis. … Eh bien, ne restez pas plantés là&nbsp;! » </div>
+<div class="mainmessage" id="92"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, détection de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! Notice informative : « vous saisissez ? Des ennemis. … Eh bien, ne restez pas plantés là&nbsp;! »<a class="link" href="#92">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1400,9 +1401,9 @@ function show(el) {
 <div class="reply"> 						<div class="char raluca" style=""></div>				<span class="buddy">Raluca :</span> <p>Même pas pour moi? <img src="smile/square/lookup.png" alt="innocent" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte. </div>
+<div class="mainmessage" id="93"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte.<a class="link" href="#93">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>Départ de l'orbite locale.</strong> Systèmes de <em>navigations gelés durant 1 cycle</em>. </div>
+<div class="mainmessage" id="94"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>Départ de l'orbite locale.</strong> Systèmes de <em>navigations gelés durant 1 cycle</em>.<a class="link" href="#94">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1416,7 +1417,7 @@ function show(el) {
 <div class="reply"> 						<div class="char raluca" style=""></div>				<span class="buddy">Raluca :</span> <p>Je voulais qu'on arrose mon feu. (Par ailleurs besoin d'un relais).</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <br><p><strong>SEX SHOP Poulilode X</strong> (12 cases)<br><em>Ouest - 3 <img src="http://mush.vg/img/icons/ui/fuel.png" alt="mush_fuel" class="tid_ico"><strong></strong></em><br>Désert, Verger, Désert, Insecte, Vent fort, Montagne, Forêt, Grotte, Marais, Ruine, Désert, Désert<br><strong>Matériel</strong> <em>combinaisons</em> de plage, boussole pour le pilote, corde, armes, foreuse <em>si vous pensez à autre chose dites le moi</em></p> </div>
+<div class="mainmessage" id="95"> 				<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <br><p><strong>SEX SHOP Poulilode X</strong> (12 cases)<br><em>Ouest - 3 <img src="http://mush.vg/img/icons/ui/fuel.png" alt="mush_fuel" class="tid_ico"><strong></strong></em><br>Désert, Verger, Désert, Insecte, Vent fort, Montagne, Forêt, Grotte, Marais, Ruine, Désert, Désert<br><strong>Matériel</strong> <em>combinaisons</em> de plage, boussole pour le pilote, corde, armes, foreuse <em>si vous pensez à autre chose dites le moi</em></p><a class="link" href="#95">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1494,25 +1495,25 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>mon choupinou ce massage était parfair , reviens pour la suite et oh mais non na pars pas...</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>prend le mégaphone et la micro général qui s’entend partout : tap tap</em> Le bateau prend l'eau, je répète : le bateau prend l'eau. veuillez faire les réparations nécessaires avant qu'on ne finisse comme le Titanic, merci parceque je ne nage plus aussi bien que dans ma jeunesse...</p> </div>
+<div class="mainmessage" id="96"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>prend le mégaphone et la micro général qui s’entend partout : tap tap</em> Le bateau prend l'eau, je répète : le bateau prend l'eau. veuillez faire les réparations nécessaires avant qu'on ne finisse comme le Titanic, merci parceque je ne nage plus aussi bien que dans ma jeunesse...</p><a class="link" href="#96">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>équipement hors d'usage</strong> signalé par <strong>Chao</strong>. </div>
+<div class="mainmessage" id="97"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>équipement hors d'usage</strong> signalé par <strong>Chao</strong>.<a class="link" href="#97">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>reservoir fuel A un drone dessus</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>équipement hors d'usage</strong> signalé par <strong>Chao</strong>. </div>
+<div class="mainmessage" id="98"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>équipement hors d'usage</strong> signalé par <strong>Chao</strong>.<a class="link" href="#98">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>porte sdm/tourelleA</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Vaisseau étranger non armé détecté</strong>. </div>
+<div class="mainmessage" id="99"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Vaisseau étranger non armé détecté</strong>.<a class="link" href="#99">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Détection d'un <strong>signal cosmique crypté</strong>. Cause&nbsp;: tentative de communication vers le Daedalus. <em>Intervention du « Resp. COMM&nbsp;» requise.</em> </div>
+<div class="mainmessage" id="100"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Détection d'un <strong>signal cosmique crypté</strong>. Cause&nbsp;: tentative de communication vers le Daedalus. <em>Intervention du « Resp. COMM&nbsp;» requise.</em><a class="link" href="#100">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1554,17 +1555,17 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>ah ben ca marche les menaces <em>a retenir</em> bon on va en baie d'exursion?</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte. </div>
+<div class="mainmessage" id="101"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte.<a class="link" href="#101">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, détection de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! Conseil automatique : « grimpez dans une tourelle et appuyez sur le gros bouton ! » </div>
+<div class="mainmessage" id="102"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, détection de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! Conseil automatique : « grimpez dans une tourelle et appuyez sur le gros bouton ! »<a class="link" href="#102">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>planète détectée</strong> sur le système de destination. </div>
+<div class="mainmessage" id="103"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>planète détectée</strong> sur le système de destination.<a class="link" href="#103">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Déplacement du Daedalus&nbsp;: en cours. <strong>Nouvelle orbite</strong> <em>atteinte dans 1 cycle</em>. </div>
+<div class="mainmessage" id="104"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Déplacement du Daedalus&nbsp;: en cours. <strong>Nouvelle orbite</strong> <em>atteinte dans 1 cycle</em>.<a class="link" href="#104">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Le vaisseau a changé de cap. Il pointe maintenant vers : Ouest </div>
+<div class="mainmessage" id="105"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Le vaisseau a changé de cap. Il pointe maintenant vers : Ouest<a class="link" href="#105">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p><strong> <em> Les excursions de Giogio la saumure : </em> </strong></p> </div>
+<div class="mainmessage" id="106"> 				<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p><strong> <em> Les excursions de Giogio la saumure : </em> </strong></p><a class="link" href="#106">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1604,7 +1605,7 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>bon je vais mettre le fuel et nous faire partir <img src="smile/square/dontcare.png" alt="-_-" class="tid_ico"> <em>faut tout faire ici</em></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char stephen" style=""></div>				<span class="buddy">Stephen :</span> <p>Qui pour un petit room service? Faites vos commandes le cuistot est livré avec <img src="smile/square/wink.png" alt=";)" class="tid_ico"></p> </div>
+<div class="mainmessage" id="107"> 				<div class="char stephen" style=""></div>				<span class="buddy">Stephen :</span> <p>Qui pour un petit room service? Faites vos commandes le cuistot est livré avec <img src="smile/square/wink.png" alt=";)" class="tid_ico"></p><a class="link" href="#107">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1627,7 +1628,7 @@ function show(el) {
 <div class="reply"> 						<div class="char paola" style=""></div>				<span class="buddy">Paola :</span> <p>Merci pour le room service mon grand moustachu.</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char paola" style=""></div>				<span class="buddy">Paola :</span> <p><strong><em>Com' tralala pouet pouet le rapport qui en dit long</em></strong> (comme la bite à papa) :</p> </div>
+<div class="mainmessage" id="108"> 				<div class="char paola" style=""></div>				<span class="buddy">Paola :</span> <p><strong><em>Com' tralala pouet pouet le rapport qui en dit long</em></strong> (comme la bite à papa) :</p><a class="link" href="#108">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1683,13 +1684,13 @@ function show(el) {
 <div class="reply"> 						<div class="char kuan_ti" style=""></div>				<span class="buddy">Kuan Ti :</span> <p>Dans l'émotion du moment je l'ai oublié <img src="smile/square/redface.png" alt=":}" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> ALLO ALLO Y ZONT PIQUE QUELQUE CHOSE A BORD&nbsp;!!! [RAAAAAA] </div>
+<div class="mainmessage" id="109"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> ALLO ALLO Y ZONT PIQUE QUELQUE CHOSE A BORD&nbsp;!!! [RAAAAAA]<a class="link" href="#109">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Un vaisseau étranger a quitté le secteur. </div>
+<div class="mainmessage" id="110"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Un vaisseau étranger a quitté le secteur.<a class="link" href="#110">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Vaisseau étranger non armé détecté</strong>. </div>
+<div class="mainmessage" id="111"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Vaisseau étranger non armé détecté</strong>.<a class="link" href="#111">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char terrence" style=""></div>				<span class="buddy">Terrence :</span> <p><em>Sexy Terry commence à s'agiter dans son sommeil, à frétiller et à marmonner des formules incompréhensibles.</em><br>Rmmmmh… E = t'aimes ça, cochonne&nbsp;? <img src="smile/square/keepcool.png" alt=":K" class="tid_ico"> Rrrr… pschhhht… Descartes&nbsp;! Descartes mon cul, oui, c'est trop… Zzz… l'union du Moi et du Sur Moi… Fffblblblblblll… point de fusion… fonction de température et pression des corps…<br><em>De la fumée lui sort par les oreilles, il se met à baver comme un renard enragé qui aurait vu passer une lapine en porte-jarretelles, son entrejambe gonfle et craque et envoie un bouton assommer une petite vieille qui tombe par-dessus bord. Le superslip Grocci ne peut lui non plus contenir ni le monstre qui quitte l'abîme de la mollesse ni son grondement magmatique, et soudain il émerge des abysses sousvestimentaires de Torrid Terrence tel une hydre en carton-pâte à une seule tête d'un mauvais film de SF nord-coréen.</em></p> </div>
+<div class="mainmessage" id="112"> 				<div class="char terrence" style=""></div>				<span class="buddy">Terrence :</span> <p><em>Sexy Terry commence à s'agiter dans son sommeil, à frétiller et à marmonner des formules incompréhensibles.</em><br>Rmmmmh… E = t'aimes ça, cochonne&nbsp;? <img src="smile/square/keepcool.png" alt=":K" class="tid_ico"> Rrrr… pschhhht… Descartes&nbsp;! Descartes mon cul, oui, c'est trop… Zzz… l'union du Moi et du Sur Moi… Fffblblblblblll… point de fusion… fonction de température et pression des corps…<br><em>De la fumée lui sort par les oreilles, il se met à baver comme un renard enragé qui aurait vu passer une lapine en porte-jarretelles, son entrejambe gonfle et craque et envoie un bouton assommer une petite vieille qui tombe par-dessus bord. Le superslip Grocci ne peut lui non plus contenir ni le monstre qui quitte l'abîme de la mollesse ni son grondement magmatique, et soudain il émerge des abysses sousvestimentaires de Torrid Terrence tel une hydre en carton-pâte à une seule tête d'un mauvais film de SF nord-coréen.</em></p><a class="link" href="#112">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1707,9 +1708,9 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>profiter d'etre tranquille pour aller vous entrainer au jet ski <img src="smile/square/wink.png" alt=";)" class="tid_ico"> et ramasser les cullottes lancé hier soir pendant la fiesta! <em>ça se vend à pris d'or chez les alien </em></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Vaisseau étranger non armé détecté</strong>. </div>
+<div class="mainmessage" id="113"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Vaisseau étranger non armé détecté</strong>.<a class="link" href="#113">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p><em>Chers clients, chères clientes</em> Euh chers passagers et chères passagères! Une de nos passagères <em>atteintes d'une maladie sexuellement transmissible semble avoir eu un accès de folie et a tué le commandant et un de nos matelots</em> (euh si je dis ça, ça va être la panique! <img src="smile/square/omg.png" alt="omg" class="tid_ico">...)<br>Une de nos passagères à perverti le commandant et est parti avec lui et un de nos estimés matelots rejoindre la rive à la nage pour vivre d'amour et d'eau fraîche! Nous ne les reverrons donc plus... <img src="smile/square/lookup.png" alt="innocent" class="tid_ico"></p> </div>
+<div class="mainmessage" id="114"> 				<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p><em>Chers clients, chères clientes</em> Euh chers passagers et chères passagères! Une de nos passagères <em>atteintes d'une maladie sexuellement transmissible semble avoir eu un accès de folie et a tué le commandant et un de nos matelots</em> (euh si je dis ça, ça va être la panique! <img src="smile/square/omg.png" alt="omg" class="tid_ico">...)<br>Une de nos passagères à perverti le commandant et est parti avec lui et un de nos estimés matelots rejoindre la rive à la nage pour vivre d'amour et d'eau fraîche! Nous ne les reverrons donc plus... <img src="smile/square/lookup.png" alt="innocent" class="tid_ico"></p><a class="link" href="#114">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1764,7 +1765,7 @@ function show(el) {
 <div class="reply"> 						<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p>Si il n'y a pas de hunters demain matin ça serait bien que l'un des pilotes aillent chercher des débris! <img src="smile/square/smile.png" alt=":)" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>Gioele mi amore, je t'attends au dortoir alpha pour d'énergiques calins...</p> </div>
+<div class="mainmessage" id="115"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>Gioele mi amore, je t'attends au dortoir alpha pour d'énergiques calins...</p><a class="link" href="#115">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1783,9 +1784,9 @@ function show(el) {
 <div class="reply"> 						<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p>Frieda ma chère je voulais profiter que nous étions seuls pour vous butiner tendrement votre bouton de rose mais il semblerait que vous dormiez déjà? <img src="smile/square/calim.png" alt="calim" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte ! Anomalie sur un <strong>réservoir de fuel</strong>&nbsp;: contenance inaccessible. <em>Réparation requise.</em> </div>
+<div class="mainmessage" id="116"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte ! Anomalie sur un <strong>réservoir de fuel</strong>&nbsp;: contenance inaccessible. <em>Réparation requise.</em><a class="link" href="#116">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>le cuisinier de la croisière n'est pas au point : je n'ai pas eu de room service...</p> </div>
+<div class="mainmessage" id="117"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>le cuisinier de la croisière n'est pas au point : je n'ai pas eu de room service...</p><a class="link" href="#117">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1793,7 +1794,7 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>ouh ouh oh oui viens là beau cactus bronzé et bande ton muscle : le plateau de room service doit tenir en équilibre dessus...</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Interruption de la connexion avec Sol</strong>. Cause : inconnue. </div>
+<div class="mainmessage" id="118"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Interruption de la connexion avec Sol</strong>. Cause : inconnue.<a class="link" href="#118">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1806,7 +1807,7 @@ function show(el) {
 <div class="reply"> 						<div class="char raluca" style=""></div>				<span class="buddy">Raluca :</span> <p>Echec... <img src="smile/anim/angry.gif" alt="bad" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <em>Installation du module</em> «&nbsp;<strong>Filet magnetique</strong>&nbsp;»... </div>
+<div class="mainmessage" id="119"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <em>Installation du module</em> «&nbsp;<strong>Filet magnetique</strong>&nbsp;»...<a class="link" href="#119">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1826,7 +1827,7 @@ function show(el) {
 <div class="reply"> 						<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p>pas faux... et si les détecteurs tombent en même temps que le bouclier... Bon allez arrosons tout le monde! <img src="smile/square/cute.png" alt="cute" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, analyse probante de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! Conseil automatique : « grimpez dans une tourelle et appuyez sur le gros bouton ! » </div>
+<div class="mainmessage" id="120"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, analyse probante de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! Conseil automatique : « grimpez dans une tourelle et appuyez sur le gros bouton ! »<a class="link" href="#120">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1840,14 +1841,14 @@ function show(el) {
 <div class="reply"> 						<div class="char paola" style=""></div>				<span class="buddy">Paola :</span> <p>De toute façon, je pense que ça ne fonctionne pas si la com n'est pas établie.</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Consolidation des faux plafonds réussies, de rien. </div>
+<div class="mainmessage" id="121"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Consolidation des faux plafonds réussies, de rien.<a class="link" href="#121">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>La sécurité ! c'est notre devise <img src="smile/anim/cool.gif" alt="8)" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>Départ de l'orbite locale.</strong> Systèmes de <em>navigations gelés durant 1 cycle</em>. </div>
+<div class="mainmessage" id="122"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>Départ de l'orbite locale.</strong> Systèmes de <em>navigations gelés durant 1 cycle</em>.<a class="link" href="#122">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1857,13 +1858,13 @@ function show(el) {
 <div class="reply"> 						<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p>c'était pas la plus importante, celle de demain faudra faire gaffe par contre! <img src="smile/square/smile.png" alt=":)" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Vaisseau étranger non armé détecté</strong>. </div>
+<div class="mainmessage" id="123"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Vaisseau étranger non armé détecté</strong>.<a class="link" href="#123">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte. </div>
+<div class="mainmessage" id="124"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte.<a class="link" href="#124">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p><img src="smile/square/omg.png" alt="omg" class="tid_ico"> j'ai oubliez mon reveil! je nous fais bouger pour sortir de l'orbite! <strong><em>le fuel a été mis? </em></strong></p> </div>
+<div class="mainmessage" id="125"> 				<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p><img src="smile/square/omg.png" alt="omg" class="tid_ico"> j'ai oubliez mon reveil! je nous fais bouger pour sortir de l'orbite! <strong><em>le fuel a été mis? </em></strong></p><a class="link" href="#125">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p><strong>//Attention équipage</strong><br>Elimination de <strong>Roland</strong> sur le champ ! Ordre du commandant. (Nous avons démasqué janice qui n'était pas malade en expé et elle s'est transférée sur lui.</p> </div>
+<div class="mainmessage" id="126"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p><strong>//Attention équipage</strong><br>Elimination de <strong>Roland</strong> sur le champ ! Ordre du commandant. (Nous avons démasqué janice qui n'était pas malade en expé et elle s'est transférée sur lui.</p><a class="link" href="#126">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1880,7 +1881,7 @@ function show(el) {
 <div class="reply"> 						<div class="char hua" style=""></div>				<span class="buddy">Hua :</span> <p>vous aussi vous jouer de la flûte ? je suis personnellement spécialiste de la flute à aspiration</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, traces détectées de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! </div>
+<div class="mainmessage" id="127"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, traces détectées de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;!<a class="link" href="#127">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1888,9 +1889,9 @@ function show(el) {
 <div class="reply"> 						<div class="char hua" style=""></div>				<span class="buddy">Hua :</span> <p>il en reste un, je pense que pour pouvez vous le faire depuis l'une de nos tour pour achever sa chair ab....usée</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Détection d'un <strong>signal cosmique crypté</strong>. Cause&nbsp;: tentative de communication vers le Daedalus. <em>Intervention du « Resp. COMM&nbsp;» requise.</em> </div>
+<div class="mainmessage" id="128"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Détection d'un <strong>signal cosmique crypté</strong>. Cause&nbsp;: tentative de communication vers le Daedalus. <em>Intervention du « Resp. COMM&nbsp;» requise.</em><a class="link" href="#128">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Ajustement A-True&nbsp;: <em>titre réattribué</em>. Nouveau «&nbsp;<strong>Commandant</strong>&nbsp;» : <strong>Chao</strong>. </div>
+<div class="mainmessage" id="129"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Ajustement A-True&nbsp;: <em>titre réattribué</em>. Nouveau «&nbsp;<strong>Commandant</strong>&nbsp;» : <strong>Chao</strong>.<a class="link" href="#129">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1902,23 +1903,23 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>j'arrive bel éphèbe à longue queue</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Ajustement A-True&nbsp;: <em>titre réattribué</em>. Nouveau «&nbsp;<strong>Admin. NERON</strong>&nbsp;» : <strong>Terrence</strong>. </div>
+<div class="mainmessage" id="130"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Ajustement A-True&nbsp;: <em>titre réattribué</em>. Nouveau «&nbsp;<strong>Admin. NERON</strong>&nbsp;» : <strong>Terrence</strong>.<a class="link" href="#130">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>terrence vérifiez les paramètre du Bios s'il vous plait <img src="smile/square/wink.png" alt=";)" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p><strong><em>Cher équipage</em></strong><br>Avant de sombrer dans un coma profond, Melle Williams a reçu un message de sa copine Brenda de Berverly Hills qui laissait sous-entendre qu'une drôle de maladie sexuellement transmissible trainait dans le coin ayant à l'origine une mauvaisse passe sur une autoroute de campagne entre un certain Bryan et une Roberta du Brésil.<br>Elle m'a remis une <em>liste</em> avec des personnes possiblement infectées. Pas de panique bien-sûr, nul doute que vous avez pris vos précautions plastiques à la fraise (miam) ou à la banane, mais par mesure de sécurité, je procèderai bientôt à une évacuation sanitaire des poulpes mal frits.<br><strong>Bref, si vous voulez rester à bord, remuez vos tentacules un minimum et exprimez-vous régulièrement....</strong> Bah sinon...couic ! <img src="smile/square/lookup.png" alt="innocent" class="tid_ico"></p> </div>
+<div class="mainmessage" id="131"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p><strong><em>Cher équipage</em></strong><br>Avant de sombrer dans un coma profond, Melle Williams a reçu un message de sa copine Brenda de Berverly Hills qui laissait sous-entendre qu'une drôle de maladie sexuellement transmissible trainait dans le coin ayant à l'origine une mauvaisse passe sur une autoroute de campagne entre un certain Bryan et une Roberta du Brésil.<br>Elle m'a remis une <em>liste</em> avec des personnes possiblement infectées. Pas de panique bien-sûr, nul doute que vous avez pris vos précautions plastiques à la fraise (miam) ou à la banane, mais par mesure de sécurité, je procèderai bientôt à une évacuation sanitaire des poulpes mal frits.<br><strong>Bref, si vous voulez rester à bord, remuez vos tentacules un minimum et exprimez-vous régulièrement....</strong> Bah sinon...couic ! <img src="smile/square/lookup.png" alt="innocent" class="tid_ico"></p><a class="link" href="#131">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Où est cette fichue liste au final?</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Merci de ramener le medikit au labo si vous venez vers la proue du navire.</p> </div>
+<div class="mainmessage" id="132"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Merci de ramener le medikit au labo si vous venez vers la proue du navire.</p><a class="link" href="#132">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Décès enregistré :</strong> <strong>Jin Su</strong>, cause «&nbsp;Assassiné&nbsp;». </div>
+<div class="mainmessage" id="133"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Décès enregistré :</strong> <strong>Jin Su</strong>, cause «&nbsp;Assassiné&nbsp;».<a class="link" href="#133">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1927,7 +1928,7 @@ function show(el) {
 <div class="reply"> 						<div class="char paola" style=""></div>				<span class="buddy">Paola :</span> <p>Eh bien eh bien, il s'en passe des choses par ici.</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>J'ai une dépression, je me soigne, comment sans psy? il y a des apprenton?</p> </div>
+<div class="mainmessage" id="134"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>J'ai une dépression, je me soigne, comment sans psy? il y a des apprenton?</p><a class="link" href="#134">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1935,7 +1936,7 @@ function show(el) {
 <div class="reply"> 						<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p>Les apprentrons ne sont pas encore sorti, avec un peu de chance on aura un psy! <img src="smile/square/smile.png" alt=":)" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char janice" style=""></div>				<span class="buddy">Janice :</span> <p><strong><em>Transfert !</em></strong> : tuez Roland !</p> </div>
+<div class="mainmessage" id="135"> 				<div class="char janice" style=""></div>				<span class="buddy">Janice :</span> <p><strong><em>Transfert !</em></strong> : tuez Roland !</p><a class="link" href="#135">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1957,11 +1958,11 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>verifié au labo les recherches <img src="smile/anim/angry.gif" alt="bad" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Décès enregistré :</strong> <strong>Roland</strong>, cause «&nbsp;Assassiné&nbsp;». </div>
+<div class="mainmessage" id="136"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Décès enregistré :</strong> <strong>Roland</strong>, cause «&nbsp;Assassiné&nbsp;».<a class="link" href="#136">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> [Hax!] JANICE!!! [Hax!] [Hax!] Ne me laisse pas seul&nbsp;! [Hax!] JANICE&nbsp;!! [Kzz] … Janice&nbsp;!! [Kzz] JE... Janice être morte. Morte. [Kzz] <em><strong>Décès enregistré :</strong>&nbsp;<strong>Janice</strong>, cause «&nbsp;Saigné&nbsp;».</em> </div>
+<div class="mainmessage" id="137"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> [Hax!] JANICE!!! [Hax!] [Hax!] Ne me laisse pas seul&nbsp;! [Hax!] JANICE&nbsp;!! [Kzz] … Janice&nbsp;!! [Kzz] JE... Janice être morte. Morte. [Kzz] <em><strong>Décès enregistré :</strong>&nbsp;<strong>Janice</strong>, cause «&nbsp;Saigné&nbsp;».</em><a class="link" href="#137">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><strong>M'sieur Stephen !</strong><br>J'ai promis une leçon d'équitation à Mlle Hua, et j'aimerais le lit du couloir arrière quand vous serez dispo... c'est pour des exercices d'assouplissement ! <img src="smile/square/razz.png" alt=":P" class="tid_ico"></p> </div>
+<div class="mainmessage" id="138"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><strong>M'sieur Stephen !</strong><br>J'ai promis une leçon d'équitation à Mlle Hua, et j'aimerais le lit du couloir arrière quand vous serez dispo... c'est pour des exercices d'assouplissement ! <img src="smile/square/razz.png" alt=":P" class="tid_ico"></p><a class="link" href="#138">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1988,7 +1989,7 @@ function show(el) {
 <div class="reply"> 						<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><img src="smile/anim/lol.gif" alt="lol" class="tid_ico"><br>M'sieur Gioele ! vous devriez faire comique avec l'C'apt'aine et moi ! Ca rapporte pas beaucoup, mais on emballe sec ! <img src="smile/square/razz.png" alt=":P" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><strong><em>Cet après-midi ! JEU DU COCKTAIL à la piscine V.I.P. !</em></strong> <img src="smile/square/razz.png" alt=":P" class="tid_ico"><br><strong>Qui sera le meilleur !??</strong><br>Inscrivez-vous nombreux ! <img src="smile/square/yeah.png" alt="youpi" class="tid_ico"> On va s'amuser comme des petits fous... mais bien plus encore ! <img src="smile/anim/drowl.gif" alt="drowl" class="tid_ico"></p> </div>
+<div class="mainmessage" id="139"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><strong><em>Cet après-midi ! JEU DU COCKTAIL à la piscine V.I.P. !</em></strong> <img src="smile/square/razz.png" alt=":P" class="tid_ico"><br><strong>Qui sera le meilleur !??</strong><br>Inscrivez-vous nombreux ! <img src="smile/square/yeah.png" alt="youpi" class="tid_ico"> On va s'amuser comme des petits fous... mais bien plus encore ! <img src="smile/anim/drowl.gif" alt="drowl" class="tid_ico"></p><a class="link" href="#139">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -1996,7 +1997,7 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p><img src="smile/anim/cool.gif" alt="8)" class="tid_ico"> la sécurité est pour vous protéger <em>et boire un peu aussi</em></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p><strong><em>Décoration suivante</em></strong><br>Un <em>torride torréfacteur</em> qui fabrique des cocktails aphrodisiaques.<br>Un <em>filet de pêche magnétique</em> qui attire les jolies sirènes.<br>Un <em>radar à ondes spatiales</em> qui détecte les beautés aux environs.</p> </div>
+<div class="mainmessage" id="140"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p><strong><em>Décoration suivante</em></strong><br>Un <em>torride torréfacteur</em> qui fabrique des cocktails aphrodisiaques.<br>Un <em>filet de pêche magnétique</em> qui attire les jolies sirènes.<br>Un <em>radar à ondes spatiales</em> qui détecte les beautés aux environs.</p><a class="link" href="#140">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2014,7 +2015,7 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>j'ai retendu un peu le filet qui trainer un peu! <em>une chute est si vite arrivée</em></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em> cher journal intime : je suis délaissée par la gent masculine qui me prend pour une perverse et me surnomme Tatie Danielle..autant dire que pour attirer les hommes c'est complètement raté : même le chat ne veux pas de moi...un corps si expérimenté quel gâchis : ils ne savent pas ce qu'ils ratent. Les hommes à bord veulent du romantisme mais il ne nous font pas la cour non plus : il faut dire qu'il y a plus d'hommes à bord que de femmes...Je pensais faire une grève de recherche de destinations de rêves avec activités ludiques et lubriques tant qu'un homme ne me passe pas sur le corps...mais ils en ont trouvé tous seuls... Je ne sers donc à rien. Ces petits jeunes sont révulsés par les plans à 3...ils ne sont pas open. Je suis donc seule, délaissé comme une vieille chaussette en quarantaine sur le pont. Heureusement j'ai une vue magnifique sur la mer dont les sirènes m'attirent et je sens que je vais bientôt plonger les rejoindre...</em></p> </div>
+<div class="mainmessage" id="141"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em> cher journal intime : je suis délaissée par la gent masculine qui me prend pour une perverse et me surnomme Tatie Danielle..autant dire que pour attirer les hommes c'est complètement raté : même le chat ne veux pas de moi...un corps si expérimenté quel gâchis : ils ne savent pas ce qu'ils ratent. Les hommes à bord veulent du romantisme mais il ne nous font pas la cour non plus : il faut dire qu'il y a plus d'hommes à bord que de femmes...Je pensais faire une grève de recherche de destinations de rêves avec activités ludiques et lubriques tant qu'un homme ne me passe pas sur le corps...mais ils en ont trouvé tous seuls... Je ne sers donc à rien. Ces petits jeunes sont révulsés par les plans à 3...ils ne sont pas open. Je suis donc seule, délaissé comme une vieille chaussette en quarantaine sur le pont. Heureusement j'ai une vue magnifique sur la mer dont les sirènes m'attirent et je sens que je vais bientôt plonger les rejoindre...</em></p><a class="link" href="#141">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2033,7 +2034,7 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>oui Mr Rinaldo! j'ai bien compris votre soucis <img src="smile/square/facepalm.png" alt="fp" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p><strong><em>Excursion</em></strong><br><em>Température élevée, Température basse, Marais, Epave.</em><br>C'est une toute petite visite, <strong>2</strong> personnes suffisent.<br><strong>Melle Kent</strong><br>Voulez-vous que nous y allions tous les deux? <img src="smile/square/redface.png" alt=":}" class="tid_ico"><br>Je prendrai une combi et la boussole. Il vous faut une combi et la foreuse.<br>(Monsieur Soulton peut se joindre à nous s'il est disponible rapidement car il augmente notre récolte possible de fruits).</p> </div>
+<div class="mainmessage" id="142"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p><strong><em>Excursion</em></strong><br><em>Température élevée, Température basse, Marais, Epave.</em><br>C'est une toute petite visite, <strong>2</strong> personnes suffisent.<br><strong>Melle Kent</strong><br>Voulez-vous que nous y allions tous les deux? <img src="smile/square/redface.png" alt=":}" class="tid_ico"><br>Je prendrai une combi et la boussole. Il vous faut une combi et la foreuse.<br>(Monsieur Soulton peut se joindre à nous s'il est disponible rapidement car il augmente notre récolte possible de fruits).</p><a class="link" href="#142">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2053,20 +2054,20 @@ function show(el) {
 <div class="reply"> 						<div class="char janice" style=""></div>				<span class="buddy">Janice :</span> <p>Oh vous voyez qu'on irait bien ensemble, moi j'ai une chance inouïe, ça rattraperait un peu votre poisse <img src="smile/square/cute.png" alt="cute" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, traces détectées de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! </div>
+<div class="mainmessage" id="143"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, traces détectées de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;!<a class="link" href="#143">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p>On ne sort pas maintenant, on va bouger juste après la petite excursion. <img src="smile/square/cute.png" alt="cute" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte. </div>
+<div class="mainmessage" id="144"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte.<a class="link" href="#144">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Oooooh... JE <strong>détecter très jolie planète</strong>&nbsp;!! Nous aller sur planète&nbsp;? Ouiii&nbsp;? [Hax!] Gentils humains. Montrer des planètes&nbsp;!! [Haaax!] </div>
+<div class="mainmessage" id="145"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Oooooh... JE <strong>détecter très jolie planète</strong>&nbsp;!! Nous aller sur planète&nbsp;? Ouiii&nbsp;? [Hax!] Gentils humains. Montrer des planètes&nbsp;!! [Haaax!]<a class="link" href="#145">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Déplacement du Daedalus&nbsp;: en cours. <strong>Nouvelle orbite</strong> <em>atteinte dans 1 cycle</em>. </div>
+<div class="mainmessage" id="146"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Déplacement du Daedalus&nbsp;: en cours. <strong>Nouvelle orbite</strong> <em>atteinte dans 1 cycle</em>.<a class="link" href="#146">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><strong><em>Bip ! Bip !</em></strong> <strong>Une blague !?</strong> <img src="smile/square/happy.png" alt=":D" class="tid_ico"></p> </div>
+<div class="mainmessage" id="147"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><strong><em>Bip ! Bip !</em></strong> <strong>Une blague !?</strong> <img src="smile/square/happy.png" alt=":D" class="tid_ico"></p><a class="link" href="#147">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2081,7 +2082,7 @@ function show(el) {
 <div class="reply"> 						<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p>"Un couple parle: <br>- Chérie je pense à un truc si tu apprenais à faire la cuisine on pourrait se séparer de la cuisinière.<br>- Oui mais si tu apprenais a faire l'amour on pourrai se séparer de Rolo le rigolo !"<br><img src="smile/anim/lol.gif" alt="lol" class="tid_ico"><img src="smile/anim/lol.gif" alt="lol" class="tid_ico"><img src="smile/anim/lol.gif" alt="lol" class="tid_ico"><br><strong>Bip ! Bip ! Ambiance sur le Vaisseau d'l'Amour !</strong></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p><strong><em>Activités du bord J3</em></strong><br><strong><em>Excursion</em></strong> Il serait temps de visiter quelque chose, nos vacanciers vont s'ennuyer sinon. <br><strong>Madame Bergmann</strong>, si vous pouviez arrêter de courir le 200 mètres tricot dans tout le vaisseau et consacrer toute votre énergie à cela...<br><strong>Monsieur Rinaldo</strong> toute votre énergie doit passer à la recherche d'excursion tant que nous n'en avons pas une, même si vous n'avez pas encore d'aptitude particulière pour ça.<br>Je voudrais une jolie brochure, pas un gribouillis où on ne comprend rien. <img src="smile/square/dontcare.png" alt="-_-" class="tid_ico"><br><strong>Melle Rinaldo</strong><br>Une bouteille à la mer est à récupérer, nous ne pouvons pas bouger avant que cela soit fait.<br>Comme je vous l'ai déjà demandé, je voudrais que vous teniez à jour un joli carnet de voyage où vous détaillez vos avancées, c'est un minimum à faire.<br><strong><em>Le club des calamars mal passés à la friture.</em></strong><br>Kuan Ti, Eleesha sont à échanger dès que possible.<br>Pour Terrence et Chun, on verra.<br><strong><em>Communication</em></strong><br>Même si vous émergez seulement 5 minutes par jour, ça serait bien de nous tenir au courant de ce que vous faites.<br>On est dans une croisière de moules là...</p> </div>
+<div class="mainmessage" id="148"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p><strong><em>Activités du bord J3</em></strong><br><strong><em>Excursion</em></strong> Il serait temps de visiter quelque chose, nos vacanciers vont s'ennuyer sinon. <br><strong>Madame Bergmann</strong>, si vous pouviez arrêter de courir le 200 mètres tricot dans tout le vaisseau et consacrer toute votre énergie à cela...<br><strong>Monsieur Rinaldo</strong> toute votre énergie doit passer à la recherche d'excursion tant que nous n'en avons pas une, même si vous n'avez pas encore d'aptitude particulière pour ça.<br>Je voudrais une jolie brochure, pas un gribouillis où on ne comprend rien. <img src="smile/square/dontcare.png" alt="-_-" class="tid_ico"><br><strong>Melle Rinaldo</strong><br>Une bouteille à la mer est à récupérer, nous ne pouvons pas bouger avant que cela soit fait.<br>Comme je vous l'ai déjà demandé, je voudrais que vous teniez à jour un joli carnet de voyage où vous détaillez vos avancées, c'est un minimum à faire.<br><strong><em>Le club des calamars mal passés à la friture.</em></strong><br>Kuan Ti, Eleesha sont à échanger dès que possible.<br>Pour Terrence et Chun, on verra.<br><strong><em>Communication</em></strong><br>Même si vous émergez seulement 5 minutes par jour, ça serait bien de nous tenir au courant de ce que vous faites.<br>On est dans une croisière de moules là...</p><a class="link" href="#148">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2109,9 +2110,9 @@ function show(el) {
 <div class="reply"> 						<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p>En interne uniquement, ça ne me convient pas. Arretez de faire bande à part et exprimez-vous pour tout le monde, vous avez la voix si douce ! <em>ahem</em></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte ! Anomalie sur un <strong>réservoir de fuel</strong>&nbsp;: contenance inaccessible. <em>Réparation requise.</em> </div>
+<div class="mainmessage" id="149"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte ! Anomalie sur un <strong>réservoir de fuel</strong>&nbsp;: contenance inaccessible. <em>Réparation requise.</em><a class="link" href="#149">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>Excursion n°4 : spécial bain de boue et enrobage, massage de boue ou combat de filles pour se départager les hommes dans la boue si vous préferez (Sud, 4, 2 marais) mais je sens que ca ne va pas vous plaire malgré la promotion...</p> </div>
+<div class="mainmessage" id="150"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>Excursion n°4 : spécial bain de boue et enrobage, massage de boue ou combat de filles pour se départager les hommes dans la boue si vous préferez (Sud, 4, 2 marais) mais je sens que ca ne va pas vous plaire malgré la promotion...</p><a class="link" href="#150">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2134,7 +2135,7 @@ function show(el) {
 <div class="reply"> 						<div class="char janice" style=""></div>				<span class="buddy">Janice :</span> <p>Tatie Danielle <img src="smile/square/cute.png" alt="cute" class="tid_ico"> J'adore !!!!</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Détection d'un <strong>signal cosmique crypté</strong>. Cause&nbsp;: tentative de communication vers le Daedalus. <em>Intervention du « Resp. COMM&nbsp;» requise.</em> </div>
+<div class="mainmessage" id="151"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Détection d'un <strong>signal cosmique crypté</strong>. Cause&nbsp;: tentative de communication vers le Daedalus. <em>Intervention du « Resp. COMM&nbsp;» requise.</em><a class="link" href="#151">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2143,7 +2144,7 @@ function show(el) {
 <div class="reply"> 						<div class="char paola" style=""></div>				<span class="buddy">Paola :</span> <p>Ces papouasiens, de sacrés petits garnements.</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char chun" style=""></div>				<span class="buddy">Chun :</span> <p>C'est étrange, je ne comprends pas. La Mère Supérieure a du faire une erreur. Capitaine, ce bateau a bien pour destination Saint-Jacques-de-Compostelle?</p> </div>
+<div class="mainmessage" id="152"> 				<div class="char chun" style=""></div>				<span class="buddy">Chun :</span> <p>C'est étrange, je ne comprends pas. La Mère Supérieure a du faire une erreur. Capitaine, ce bateau a bien pour destination Saint-Jacques-de-Compostelle?</p><a class="link" href="#152">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2163,14 +2164,14 @@ function show(el) {
 <div class="reply"> 						<div class="char hua" style=""></div>				<span class="buddy">Hua :</span> <p>oui hymen c'est bien de cela qu'il s'agit</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p>**Cet après-midi ! JEU DU COCKTAIL à la</p> </div>
+<div class="mainmessage" id="153"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p>**Cet après-midi ! JEU DU COCKTAIL à la</p><a class="link" href="#153">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><img src="smile/square/dontcare.png" alt="-_-" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <em>Installation du module</em> «&nbsp;<strong>Détecteur d'anomalie</strong>&nbsp;»... </div>
+<div class="mainmessage" id="154"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <em>Installation du module</em> «&nbsp;<strong>Détecteur d'anomalie</strong>&nbsp;»...<a class="link" href="#154">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2178,7 +2179,7 @@ function show(el) {
 <div class="reply"> 						<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p>Pas d'soucis, Cap'taine !<br><strong>I say Captain !</strong> <em>You say what !??</em> <strong>I say Captain !</strong> <img src="smile/square/happy.png" alt=":D" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char eleesha" style=""></div>				<span class="buddy">Eleesha :</span> <p><strong>Trois petits coups et puis s'en vont</strong></p> </div>
+<div class="mainmessage" id="155"> 				<div class="char eleesha" style=""></div>				<span class="buddy">Eleesha :</span> <p><strong>Trois petits coups et puis s'en vont</strong></p><a class="link" href="#155">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2189,18 +2190,18 @@ function show(el) {
 <div class="reply"> 						<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p>On ne tabasse personne, M'sieur Ian ! <img src="smile/square/omg.png" alt="omg" class="tid_ico"> Ou alors avec des gourdins ! <img src="smile/anim/drowl.gif" alt="drowl" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>bricole le micro du chef, celui qu'on entend dans tout le navire</em> Annonce générale : Frieda est à la recherche d'un bel ephèbe musclé, bronzé et endurant pour relations sportives de longue durée. rectification : Frieda est la recherche d'un homme (aucun critère: juste un homme pas un eunuque). Dernière miniute : Frieda cherche le chat..</p> </div>
+<div class="mainmessage" id="156"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>bricole le micro du chef, celui qu'on entend dans tout le navire</em> Annonce générale : Frieda est à la recherche d'un bel ephèbe musclé, bronzé et endurant pour relations sportives de longue durée. rectification : Frieda est la recherche d'un homme (aucun critère: juste un homme pas un eunuque). Dernière miniute : Frieda cherche le chat..</p><a class="link" href="#156">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><img src="smile/anim/lol.gif" alt="lol" class="tid_ico"><br>Bravo Mme Frieda ! Ca c'est marrant ! <img src="smile/square/happy.png" alt=":D" class="tid_ico"><br>Euh, désolé, mais j'ai rencard avec ma grosse abeille, aujourd'hui ! <img src="smile/square/redface.png" alt=":}" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Annulation du test micro-onde / chat, vous avez de la chance que je m'occupe de vous. </div>
+<div class="mainmessage" id="157"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Annulation du test micro-onde / chat, vous avez de la chance que je m'occupe de vous.<a class="link" href="#157">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char stephen" style=""></div>				<span class="buddy">Stephen :</span> <p><em> Arrive en tenu de mecano </em> J'ai réparé le hamac! Je m'installe pour la peine si une demoiselle veut jouer de la clé à molette faites moi signe <img src="smile/square/wink.png" alt=";)" class="tid_ico"></p> </div>
+<div class="mainmessage" id="158"> 				<div class="char stephen" style=""></div>				<span class="buddy">Stephen :</span> <p><em> Arrive en tenu de mecano </em> J'ai réparé le hamac! Je m'installe pour la peine si une demoiselle veut jouer de la clé à molette faites moi signe <img src="smile/square/wink.png" alt=";)" class="tid_ico"></p><a class="link" href="#158">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, détection d'un <strong>incendie</strong> dans l'une des pièces du Daedalus&nbsp;! Notice informative : « vous <em>savez</em> ce que c'est qu'un extincteur, n'est-ce pas ?.. » </div>
+<div class="mainmessage" id="159"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, détection d'un <strong>incendie</strong> dans l'une des pièces du Daedalus&nbsp;! Notice informative : « vous <em>savez</em> ce que c'est qu'un extincteur, n'est-ce pas ?.. »<a class="link" href="#159">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2208,7 +2209,7 @@ function show(el) {
 <div class="reply"> 						<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>-Infirmerie<br>-Labo<br>-Couloir avant<br>-Jardin<br>-Stockage avant</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p><strong> <em> Sauna, massage ou hammam? </em> </strong><br>Alors on peut avoir des masseuses thaïlandaises qui réaffirment la peau et nous permet de nous détendre et de moins avoir mal partout... En gros elles s'occupent de tout votre bien être! Carrément un <strong>rafistolage général</strong> quoi! <img src="smile/square/keepcool.png" alt=":K" class="tid_ico"><br>Sinon pour les plus vieux d'entre nous... On a un spécialiste des prothèses de la hanche! Si vos <strong>pistons sont défectueux</strong> il pourra vous <strong>détecter</strong> tout ça! <img src="smile/square/wink.png" alt=";)" class="tid_ico"><br>Et ensuite et bien... pour celles d'entre vous qui ont le goût du risque... <img src="smile/square/huh.png" alt="O_o" class="tid_ico"> On appellera M.<strong>Portail</strong> qui vous fera <strong>décoller</strong> avec son engin <strong>extra-large</strong>... <img src="smile/square/redface.png" alt=":}" class="tid_ico"><br> <br>Je dois dire que j'ai un faible pour les Thaïlandaises... <img src="smile/square/lookup.png" alt="innocent" class="tid_ico"></p> </div>
+<div class="mainmessage" id="160"> 				<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p><strong> <em> Sauna, massage ou hammam? </em> </strong><br>Alors on peut avoir des masseuses thaïlandaises qui réaffirment la peau et nous permet de nous détendre et de moins avoir mal partout... En gros elles s'occupent de tout votre bien être! Carrément un <strong>rafistolage général</strong> quoi! <img src="smile/square/keepcool.png" alt=":K" class="tid_ico"><br>Sinon pour les plus vieux d'entre nous... On a un spécialiste des prothèses de la hanche! Si vos <strong>pistons sont défectueux</strong> il pourra vous <strong>détecter</strong> tout ça! <img src="smile/square/wink.png" alt=";)" class="tid_ico"><br>Et ensuite et bien... pour celles d'entre vous qui ont le goût du risque... <img src="smile/square/huh.png" alt="O_o" class="tid_ico"> On appellera M.<strong>Portail</strong> qui vous fera <strong>décoller</strong> avec son engin <strong>extra-large</strong>... <img src="smile/square/redface.png" alt=":}" class="tid_ico"><br> <br>Je dois dire que j'ai un faible pour les Thaïlandaises... <img src="smile/square/lookup.png" alt="innocent" class="tid_ico"></p><a class="link" href="#160">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2235,9 +2236,9 @@ function show(el) {
 <div class="reply"> 						<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Paola a sans doute oublié de se recoucher après son annonce, je vais prendre le lit de l'infirmerie pour quelques heures.</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Annulation du test micro-onde / tuyaux, de rien. </div>
+<div class="mainmessage" id="161"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: Annulation du test micro-onde / tuyaux, de rien.<a class="link" href="#161">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p>Chers vacanciers, afin de vous divertir, je vous ai tous inscrits aux <strong><em>Activités</em></strong> du bord ! <em>Vous pouvez apercevoir au passage l'île aux mouettes sur votre droite.</em><br><strong>Monsieur Rinaldo</strong>, avec votre torse musclé et huilé, vous êtes inscrit pour le concours de lancer de frigo (original, n'est-ce-pas ?), dans l'idéal, il doit aterrir en baie icarus. Ensuite, il y a un concours de montage de literie pour vous, le sofa le plus moelleux remportera le cocktail du jour ! Couloir arrière me semble bien pour le sofa, cela facilitera l'échange des fluides et MelleTomescu aime le confort.<br><strong>Melle Tomescu</strong> vous êtes à l'accueil des Thaïlandaises au nexus. Laissez tomber le Solarium pour le moment, il fait déjà 40° à l'ombre sur le pont. <br><strong>Monsieur Archer</strong> nul doute que les Thaïlandaises seront également à votre goût, veuillez aider Melle Tomescu. Il y a également quelques machines à améliorer, n'oubliez pas de laisser un morceau de métal pour le concours de sofa de Monsieur Rinaldo.<br><strong>Monsieur Seagull</strong> Une jolie rouquine a demandé de l'aide au laboratoire à cocktails, je suis sûr que vous êtes l'homme de la situation. Sortez votre shaker !<br><strong>Madame Bergmann</strong> veuillez nous trouver une excursion agréable et nous en donner correctement le détail avec les merveilles à visiter, les risques...je veux la brochure vernie la plus complète possible. Il faut appâter les touristes !</p> </div>
+<div class="mainmessage" id="162"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p>Chers vacanciers, afin de vous divertir, je vous ai tous inscrits aux <strong><em>Activités</em></strong> du bord ! <em>Vous pouvez apercevoir au passage l'île aux mouettes sur votre droite.</em><br><strong>Monsieur Rinaldo</strong>, avec votre torse musclé et huilé, vous êtes inscrit pour le concours de lancer de frigo (original, n'est-ce-pas ?), dans l'idéal, il doit aterrir en baie icarus. Ensuite, il y a un concours de montage de literie pour vous, le sofa le plus moelleux remportera le cocktail du jour ! Couloir arrière me semble bien pour le sofa, cela facilitera l'échange des fluides et MelleTomescu aime le confort.<br><strong>Melle Tomescu</strong> vous êtes à l'accueil des Thaïlandaises au nexus. Laissez tomber le Solarium pour le moment, il fait déjà 40° à l'ombre sur le pont. <br><strong>Monsieur Archer</strong> nul doute que les Thaïlandaises seront également à votre goût, veuillez aider Melle Tomescu. Il y a également quelques machines à améliorer, n'oubliez pas de laisser un morceau de métal pour le concours de sofa de Monsieur Rinaldo.<br><strong>Monsieur Seagull</strong> Une jolie rouquine a demandé de l'aide au laboratoire à cocktails, je suis sûr que vous êtes l'homme de la situation. Sortez votre shaker !<br><strong>Madame Bergmann</strong> veuillez nous trouver une excursion agréable et nous en donner correctement le détail avec les merveilles à visiter, les risques...je veux la brochure vernie la plus complète possible. Il faut appâter les touristes !</p><a class="link" href="#162">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2350,16 +2351,16 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>quel goujat! et il demande du romantisme; ce n'est pas parcequ'il y a moins d'hommes que de femmes à bord que vous pouvez tout vous permettre....<em>siffle </em>https://www.youtube.com/watch?v=-Crzp2jPRZI</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>oh Paola : solidarité féminine : ton relais de message avec la corne de brume me fait au coeur je me sens moins seule <img src="smile/square/cute.png" alt="cute" class="tid_ico"> <em>par contre le rhum fait déjà effet : je sors par une porte, j'en ouvre une autre et je reviens au point de départ</em> mais quelles idée de faire la déco des couloirs de la même couleur on s'y perd</p> </div>
+<div class="mainmessage" id="163"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>oh Paola : solidarité féminine : ton relais de message avec la corne de brume me fait au coeur je me sens moins seule <img src="smile/square/cute.png" alt="cute" class="tid_ico"> <em>par contre le rhum fait déjà effet : je sors par une porte, j'en ouvre une autre et je reviens au point de départ</em> mais quelles idée de faire la déco des couloirs de la même couleur on s'y perd</p><a class="link" href="#163">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Interruption de la connexion avec Sol</strong>. Cause : inconnue. </div>
+<div class="mainmessage" id="164"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Interruption de la connexion avec Sol</strong>. Cause : inconnue.<a class="link" href="#164">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char paola" style=""></div>				<span class="buddy">Paola :</span> <p>C'est réparé. C'est quand j'ai menti en répondant oui à une question sur mon âge que tout a planté.</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Vaisseau étranger non armé détecté</strong>. </div>
+<div class="mainmessage" id="165"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Vaisseau étranger non armé détecté</strong>.<a class="link" href="#165">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2373,7 +2374,7 @@ function show(el) {
 <div class="reply"> 						<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p>Oui je le fais de suite et je vous invite.</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>Mr Gioele ou avons nous un lit douillet pour le réduire en miettes avec nos ebats virulents</p> </div>
+<div class="mainmessage" id="166"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>Mr Gioele ou avons nous un lit douillet pour le réduire en miettes avec nos ebats virulents</p><a class="link" href="#166">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2407,14 +2408,14 @@ function show(el) {
 <div class="reply"> 						<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p>entrée interdite sauf pour moi bien sur! <img src="smile/anim/drowl.gif" alt="drowl" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p><strong> <em>cafés : </em> </strong></p> </div>
+<div class="mainmessage" id="167"> 				<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p><strong> <em>cafés : </em> </strong></p><a class="link" href="#167">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p>J3 pris!</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <em>Installation du module</em> «&nbsp;<strong>Rafistolage Général</strong>&nbsp;»... </div>
+<div class="mainmessage" id="168"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <em>Installation du module</em> «&nbsp;<strong>Rafistolage Général</strong>&nbsp;»...<a class="link" href="#168">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2427,7 +2428,7 @@ function show(el) {
 <div class="reply"> 						<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p>Limbo l'éléphant! <img src="smile/square/yeah.png" alt="youpi" class="tid_ico"> c'est plus rapide et le temps c'et de l'argent <img src="smile/anim/cool.gif" alt="8)" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><strong>MARC DORCEL PARTY !</strong><br><strong><em>Nuit câline, nuit de Chine !</em></strong><br>Délices asiatiques, sushis sur Mlle Finola, canard laqué par votre serviteur !<br>Les huiles essentielles vont couler à flots dans cette pagode dédiée aux sens ! <img src="smile/square/razz.png" alt=":P" class="tid_ico"><br>Démonstration des 337 positions inconnues du Kama-Sutra avec en guest star, Hirondelle du Matin, la célèbre danseuse nue de Pékin ! <img src="smile/anim/drowl.gif" alt="drowl" class="tid_ico"><br>Plaisirs exotiques garantis ! <strong>Venez nombreux !</strong></p> </div>
+<div class="mainmessage" id="169"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><strong>MARC DORCEL PARTY !</strong><br><strong><em>Nuit câline, nuit de Chine !</em></strong><br>Délices asiatiques, sushis sur Mlle Finola, canard laqué par votre serviteur !<br>Les huiles essentielles vont couler à flots dans cette pagode dédiée aux sens ! <img src="smile/square/razz.png" alt=":P" class="tid_ico"><br>Démonstration des 337 positions inconnues du Kama-Sutra avec en guest star, Hirondelle du Matin, la célèbre danseuse nue de Pékin ! <img src="smile/anim/drowl.gif" alt="drowl" class="tid_ico"><br>Plaisirs exotiques garantis ! <strong>Venez nombreux !</strong></p><a class="link" href="#169">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2436,7 +2437,7 @@ function show(el) {
 <div class="reply"> 						<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p><em>réveille Paola pour qu'elle prenne des notes </em></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char hua" style=""></div>				<span class="buddy">Hua :</span> <p>Après avoir réccupéré les reste des ébats musclés et virils de notre commandant, je vous informe que nous avons 6 débris métalliques, 4 débris plastiques et 3 capsules bleues <img src="smile/square/smile.png" alt=":)" class="tid_ico"></p> </div>
+<div class="mainmessage" id="170"> 				<div class="char hua" style=""></div>				<span class="buddy">Hua :</span> <p>Après avoir réccupéré les reste des ébats musclés et virils de notre commandant, je vous informe que nous avons 6 débris métalliques, 4 débris plastiques et 3 capsules bleues <img src="smile/square/smile.png" alt=":)" class="tid_ico"></p><a class="link" href="#170">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2446,7 +2447,7 @@ function show(el) {
 <div class="reply"> 						<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p>si on peut monter/démonter le lit zaro rapidement? <img src="smile/square/smile.png" alt=":)" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Interruption de la connexion avec Sol</strong>. Cause : inconnue. </div>
+<div class="mainmessage" id="171"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Interruption de la connexion avec Sol</strong>. Cause : inconnue.<a class="link" href="#171">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2455,7 +2456,7 @@ function show(el) {
 <div class="reply"> 						<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p><em>Regarde Jin Su de haut en bas et fait la moue</em> <br>Bon ça suffira j'imagine. Pourriez-vous me changez les esclaves du labo? Ils se sont tous endormis, sauf Eleesha. Qui n'est pas plus active pour autant d'ailleurs, c'est étrange.</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p><strong><em>Lits</em></strong><br>C'est simple, on laisse les lits aux <em>pilotes</em> en priorité. Ensuite, on favorise madame Bergmann qui doit nous trouver des excursions. Elle peut venir à côté de moi en dortoir beta.<br><em>Pour les autres lits</em> :<br>Si vous savez que vous ne serez pas très présents régulièrement, vous n'en prenez pas et vous dormirez debout. Ca muscle les jambes ! <img src="smile/square/razz.png" alt=":P" class="tid_ico"></p> </div>
+<div class="mainmessage" id="172"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p><strong><em>Lits</em></strong><br>C'est simple, on laisse les lits aux <em>pilotes</em> en priorité. Ensuite, on favorise madame Bergmann qui doit nous trouver des excursions. Elle peut venir à côté de moi en dortoir beta.<br><em>Pour les autres lits</em> :<br>Si vous savez que vous ne serez pas très présents régulièrement, vous n'en prenez pas et vous dormirez debout. Ca muscle les jambes ! <img src="smile/square/razz.png" alt=":P" class="tid_ico"></p><a class="link" href="#172">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2475,7 +2476,7 @@ function show(el) {
 <div class="reply"> 						<div class="char raluca" style=""></div>				<span class="buddy">Raluca :</span> <p>Contre le mur, avec Shrody qui nous regarde d'un air vicieux... <em>fantasme</em></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>équipement hors d'usage</strong> signalé par <strong>Jin Su</strong>. </div>
+<div class="mainmessage" id="173"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>équipement hors d'usage</strong> signalé par <strong>Jin Su</strong>.<a class="link" href="#173">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2490,7 +2491,7 @@ function show(el) {
 <div class="reply"> 						<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p>Que quelqu'un répare cette porte, par pitié ! <img src="smile/square/crylot.png" alt="T_T" class="tid_ico"><br>Ca bloque tous les pilotes.</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>Excursion n°2 : épave, désert pour bronzer, montagne pour se muscler, ruminant et insecte pour manger, insecte et le bouquet final : le volcan. En raison des risque trop importants de pertes de passagers (et donc de riches clients), le commandant et le personnel naviguant annulent cette excursion.</p> </div>
+<div class="mainmessage" id="174"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>Excursion n°2 : épave, désert pour bronzer, montagne pour se muscler, ruminant et insecte pour manger, insecte et le bouquet final : le volcan. En raison des risque trop importants de pertes de passagers (et donc de riches clients), le commandant et le personnel naviguant annulent cette excursion.</p><a class="link" href="#174">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2510,9 +2511,9 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>c'est pas une croisière c'est le bagne...mais comme je ne tiens pas à être abandonnée sur une ile déserte, j'obéis.</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><strong><em>Ce soir ! La jungle !</em></strong><br><strong>Bip ! Bip !</strong><br>Pourrez-vous être un éléphant !? <img src="smile/square/razz.png" alt=":P" class="tid_ico"><br>Ou un marsupilami !? <img src="smile/anim/drowl.gif" alt="drowl" class="tid_ico"><br>Un bonobo !? <img src="smile/square/huh.png" alt="O_o" class="tid_ico"><br>Une tigresse !? <img src="smile/square/razz.png" alt=":P" class="tid_ico"><br>Une cochonne sauvage !? <img src="smile/square/redface.png" alt=":}" class="tid_ico"><br>Une biche aux abois de la Jungle de Sumatra !?? <img src="smile/anim/drowl.gif" alt="drowl" class="tid_ico"><br><strong>La chasse est ouverte !</strong> Nombre de coups illimités ! Quatuors autorisés !<br>C'est une partie de chasse de la Jungle à travers tout le vaisseau ! <img src="smile/square/razz.png" alt=":P" class="tid_ico"><br><strong><em>Attention ! Les fouets vont claquer !</em></strong> <img src="smile/anim/drowl.gif" alt="drowl" class="tid_ico"><br><em>Et, ce soir, en guests stars, la tribu d'hommes nus de la Jungle profonde !</em></p> </div>
+<div class="mainmessage" id="175"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><strong><em>Ce soir ! La jungle !</em></strong><br><strong>Bip ! Bip !</strong><br>Pourrez-vous être un éléphant !? <img src="smile/square/razz.png" alt=":P" class="tid_ico"><br>Ou un marsupilami !? <img src="smile/anim/drowl.gif" alt="drowl" class="tid_ico"><br>Un bonobo !? <img src="smile/square/huh.png" alt="O_o" class="tid_ico"><br>Une tigresse !? <img src="smile/square/razz.png" alt=":P" class="tid_ico"><br>Une cochonne sauvage !? <img src="smile/square/redface.png" alt=":}" class="tid_ico"><br>Une biche aux abois de la Jungle de Sumatra !?? <img src="smile/anim/drowl.gif" alt="drowl" class="tid_ico"><br><strong>La chasse est ouverte !</strong> Nombre de coups illimités ! Quatuors autorisés !<br>C'est une partie de chasse de la Jungle à travers tout le vaisseau ! <img src="smile/square/razz.png" alt=":P" class="tid_ico"><br><strong><em>Attention ! Les fouets vont claquer !</em></strong> <img src="smile/anim/drowl.gif" alt="drowl" class="tid_ico"><br><em>Et, ce soir, en guests stars, la tribu d'hommes nus de la Jungle profonde !</em></p><a class="link" href="#175">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>où le hamac a -t - il été installé?</p> </div>
+<div class="mainmessage" id="176"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>où le hamac a -t - il été installé?</p><a class="link" href="#176">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2535,7 +2536,7 @@ function show(el) {
 <div class="reply"> 						<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p>Ou vous restez sur le pont puisque apparemment, vous n'aviez même pas vu que Paola donne du repos gratuitement...ah la la, les vieux ! <img src="smile/square/facepalm.png" alt="fp" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char finola" style=""></div>				<span class="buddy">Finola :</span> <p>Je m'interroge sur mes recherches. Je vois pleins de choses destinées à abattre un ennemi. Mais je ne vois aucun ennemi par ici! Ces manuels sont ils si vieux que ça?</p> </div>
+<div class="mainmessage" id="177"> 				<div class="char finola" style=""></div>				<span class="buddy">Finola :</span> <p>Je m'interroge sur mes recherches. Je vois pleins de choses destinées à abattre un ennemi. Mais je ne vois aucun ennemi par ici! Ces manuels sont ils si vieux que ça?</p><a class="link" href="#177">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2554,7 +2555,7 @@ function show(el) {
 <div class="reply"> 						<div class="char janice" style=""></div>				<span class="buddy">Janice :</span> <p>J'aime en avoir partout personnellement <img src="smile/square/redface.png" alt=":}" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, détection de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! Conseil automatique : « grimpez dans une tourelle et appuyez sur le gros bouton ! » </div>
+<div class="mainmessage" id="178"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, détection de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! Conseil automatique : « grimpez dans une tourelle et appuyez sur le gros bouton ! »<a class="link" href="#178">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2562,9 +2563,9 @@ function show(el) {
 <div class="reply"> 						<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p>Ils ne sont pas offensifs maintenant, on attend le cycle 6. <img src="smile/square/razz.png" alt=":P" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <p>hax ... thaïlandaises trèèèès chaude ...hax ....pas vouloir finir .... hax ....arrêtez.....hax....non laissez les moi !!!!!!!!</p> </div>
+<div class="mainmessage" id="179"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <p>hax ... thaïlandaises trèèèès chaude ...hax ....pas vouloir finir .... hax ....arrêtez.....hax....non laissez les moi !!!!!!!!</p><a class="link" href="#179">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, analyse probante de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! Conseil automatique : « merci aux pilotes des patrouilleurs de tirer <em>sur l'ennemi</em>, pas sur nous... » </div>
+<div class="mainmessage" id="180"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Alerte, analyse probante de <strong>vaisseaux hostiles</strong> dans le périmètre du Daedalus&nbsp;! Conseil automatique : « merci aux pilotes des patrouilleurs de tirer <em>sur l'ennemi</em>, pas sur nous... »<a class="link" href="#180">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2572,18 +2573,18 @@ function show(el) {
 <div class="reply"> 						<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p>C'est fait, Cap'taine, mon Cap'taine ! <img src="smile/square/razz.png" alt=":P" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Détection d'un <strong>signal cosmique crypté</strong>. Cause&nbsp;: tentative de communication vers le Daedalus. <em>Intervention du « Resp. COMM&nbsp;» requise.</em> </div>
+<div class="mainmessage" id="181"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Détection d'un <strong>signal cosmique crypté</strong>. Cause&nbsp;: tentative de communication vers le Daedalus. <em>Intervention du « Resp. COMM&nbsp;» requise.</em><a class="link" href="#181">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p>C'est une bouteille à la mer avec une poésie mièvre...inutile de la ramasser, on ne veut pas de ça ici. <img src="smile/square/dontcare.png" alt="-_-" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte. </div>
+<div class="mainmessage" id="182"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Nouvelle destination</strong> du Daedalus : atteinte.<a class="link" href="#182">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>Départ de l'orbite locale.</strong> Systèmes de <em>navigations gelés durant 1 cycle</em>. </div>
+<div class="mainmessage" id="183"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: <strong>Départ de l'orbite locale.</strong> Systèmes de <em>navigations gelés durant 1 cycle</em>.<a class="link" href="#183">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>1ère excursion proposée </em> : pas obligatoire mais fortement recommandé la grande pyramide inversé de chaops à Kaftoide avec pour nous accueillir une foret, une critallite, puis après cet échauffement : la partie sportive avec insecte, prédateur, vent fort et sismique</p> </div>
+<div class="mainmessage" id="184"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p><em>1ère excursion proposée </em> : pas obligatoire mais fortement recommandé la grande pyramide inversé de chaops à Kaftoide avec pour nous accueillir une foret, une critallite, puis après cet échauffement : la partie sportive avec insecte, prédateur, vent fort et sismique</p><a class="link" href="#184">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2603,7 +2604,7 @@ function show(el) {
 <div class="reply"> 						<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p>Bon...je vois que personne ne frétille du slip à l'idée de cette excursion...on met les voiles.<br>Vous en chercherez une autre. <img src="smile/square/razz.png" alt=":P" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p><em>Mhhbbr Breuar</em>Bonjour à tous! Je suis le professeur Von Soulton. <br>Spécialiste en océanographie, urologue, gynécologue, philanthrope à mes heures, et fumeur de pipes.</p> </div>
+<div class="mainmessage" id="185"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p><em>Mhhbbr Breuar</em>Bonjour à tous! Je suis le professeur Von Soulton. <br>Spécialiste en océanographie, urologue, gynécologue, philanthrope à mes heures, et fumeur de pipes.</p><a class="link" href="#185">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2611,11 +2612,11 @@ function show(el) {
 <div class="reply"> 						<div class="char finola" style=""></div>				<span class="buddy">Finola :</span> <p>Je peux possiblement vous faire une place dans ma loge, vous seriez un peu mon VIP ...</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Vaisseau étranger non armé détecté</strong>. </div>
+<div class="mainmessage" id="186"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Vaisseau étranger non armé détecté</strong>.<a class="link" href="#186">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Finola, on vous a déjà dis que vos cheveux étaient magnifiquement assortis avec la chaise du labo?</p> </div>
+<div class="mainmessage" id="187"> 				<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Finola, on vous a déjà dis que vos cheveux étaient magnifiquement assortis avec la chaise du labo?</p><a class="link" href="#187">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>bienvenue , je vous trouverai de magnifiques merveilles à découvrir, à commencer par les miennes, je suis plus exprimenté que toutes ces blondes décolorées...</p> </div>
+<div class="mainmessage" id="188"> 				<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>bienvenue , je vous trouverai de magnifiques merveilles à découvrir, à commencer par les miennes, je suis plus exprimenté que toutes ces blondes décolorées...</p><a class="link" href="#188">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2635,7 +2636,7 @@ function show(el) {
 <div class="reply"> 						<div class="char ian" style=""></div>				<span class="buddy">Ian :</span> <p>Je veux voir les jardins! Des gens nus, des anémones rares et une bouillabaisse faites de 5 espèces en voie de disparition, je dis oui?</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p><em>Sécurité</em> je conseille à tous de laisser l'infirmerie libre pour les rencontres coquines</p> </div>
+<div class="mainmessage" id="189"> 				<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p><em>Sécurité</em> je conseille à tous de laisser l'infirmerie libre pour les rencontres coquines</p><a class="link" href="#189">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2652,18 +2653,18 @@ function show(el) {
 <div class="reply"> 						<div class="char gioele" style=""></div>				<span class="buddy">Gioele :</span> <p>Je peux venir si tu veux... pour réchauffer tes vieux os rien de mieux que de faire la bête à deux dos! <img src="smile/square/lookup.png" alt="innocent" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Réseaux rebelles&nbsp;:</strong> connexion établie. … Indice sanitaire&nbsp;: <em>hausse du moral de l'équipage.</em> </div>
+<div class="mainmessage" id="190"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> <strong>Réseaux rebelles&nbsp;:</strong> connexion établie. … Indice sanitaire&nbsp;: <em>hausse du moral de l'équipage.</em><a class="link" href="#190">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char hua" style=""></div>				<span class="buddy">Hua :</span> <p>le contact est établi, l'antenne s'échauffe et le moral en hausse ré-joui tout l'équipage</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Tout les membres d'équipage gagnent 3 <img src="http://mush.vg/img/icons/ui/moral.png" alt="moral">. </div>
+<div class="mainmessage" id="191"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Tout les membres d'équipage gagnent 3 <img src="http://mush.vg/img/icons/ui/moral.png" alt="moral">.<a class="link" href="#191">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><strong>Journal de bord</strong> :<br>"Chao semble intéressé par Janice. Ce regard qu'il lui lance ne trompera personne sur ses intentions."<br>Waaaa, l'autre, eh ! <img src="smile/anim/lol.gif" alt="lol" class="tid_ico"> Mlle Janice préfère les marrants comme moi, Chao <em>amigo !</em> <img src="smile/square/happy.png" alt=":D" class="tid_ico"></p> </div>
+<div class="mainmessage" id="192"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><strong>Journal de bord</strong> :<br>"Chao semble intéressé par Janice. Ce regard qu'il lui lance ne trompera personne sur ses intentions."<br>Waaaa, l'autre, eh ! <img src="smile/anim/lol.gif" alt="lol" class="tid_ico"> Mlle Janice préfère les marrants comme moi, Chao <em>amigo !</em> <img src="smile/square/happy.png" alt=":D" class="tid_ico"></p><a class="link" href="#192">Ancre</a> </div>
 
-<div class="mainmessage"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><strong>Adult only !</strong> <em>Nuit à thème</em><br><strong>T</strong>onight : Country Club ! Les filles montent des taureaux et les garçons chevauchent des pouliches ! <br>Mélange des genres autorisé ! <img src="smile/anim/drowl.gif" alt="drowl" class="tid_ico"></p> </div>
+<div class="mainmessage" id="193"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><strong>Adult only !</strong> <em>Nuit à thème</em><br><strong>T</strong>onight : Country Club ! Les filles montent des taureaux et les garçons chevauchent des pouliches ! <br>Mélange des genres autorisé ! <img src="smile/anim/drowl.gif" alt="drowl" class="tid_ico"></p><a class="link" href="#193">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2682,7 +2683,7 @@ function show(el) {
 <div class="reply"> 						<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p>Vous papillonez, Mlle Janice, vous papillonez, comment voulez-vous que je vous butinasse !?</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>Mon message ici !</p> </div>
+<div class="mainmessage" id="194"> 				<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>Mon message ici !</p><a class="link" href="#194">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2695,7 +2696,7 @@ function show(el) {
 <div class="reply"> 						<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p><em>se réveille avec un string douteux sur la tête</em> <img src="smile/square/fear.png" alt="fear" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>Je suis là ... Je cherche des capote et je reviens ce soir <img src="smile/anim/cool.gif" alt="8)" class="tid_ico"></p> </div>
+<div class="mainmessage" id="195"> 				<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>Je suis là ... Je cherche des capote et je reviens ce soir <img src="smile/anim/cool.gif" alt="8)" class="tid_ico"></p><a class="link" href="#195">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2703,7 +2704,7 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p>ben je ne sais pas pour vous ... mais moi les accident j'aime pas ça <img src="smile/anim/angry.gif" alt="bad" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p>Bienvenue à bord de notre croisière à destination de Bora-Bora, l'île nudiste. <br>Veuillez écouter les hôtesses lorsqu'elles vous présenteront les consignes de sécurité.<br>Le commandant ainsi que la Compagnie Hélios vous souhaitent un agréable séjour.<br>Pour toute question, il vous est possible de joindre le commandant via son talkie privé.</p> </div>
+<div class="mainmessage" id="196"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p>Bienvenue à bord de notre croisière à destination de Bora-Bora, l'île nudiste. <br>Veuillez écouter les hôtesses lorsqu'elles vous présenteront les consignes de sécurité.<br>Le commandant ainsi que la Compagnie Hélios vous souhaitent un agréable séjour.<br>Pour toute question, il vous est possible de joindre le commandant via son talkie privé.</p><a class="link" href="#196">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2724,7 +2725,7 @@ function show(el) {
 <div class="reply"> 						<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p>Moi, j'ai déjà fait mes preuves, et Mlle Janice a pu goûter à mon humour... mais pas seulement ! <img src="smile/square/happy.png" alt=":D" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p>Qu'est-ce qu'il y a au menu ce soir ? Voyons voir... <img src="smile/square/hmm.png" alt=":-/" class="tid_ico"></p> </div>
+<div class="mainmessage" id="197"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p>Qu'est-ce qu'il y a au menu ce soir ? Voyons voir... <img src="smile/square/hmm.png" alt=":-/" class="tid_ico"></p><a class="link" href="#197">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2751,14 +2752,14 @@ function show(el) {
 <div class="reply"> 						<div class="char chao" style=""></div>				<span class="buddy">Chao :</span> <p><em>sécurité pense sécurité</em> vous etes sure que les saucisse c'est réglementaire? <em>pourquoi il y a des mecs à bords? je croyais que c'etait une croisière uniquement feminine... <img src="smile/square/hmm.png" alt=":-/" class="tid_ico"> </em></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char raluca" style=""></div>				<span class="buddy">Raluca :</span> <p><em><strong>Pilgred - Soleil Artificiel</strong></em> <br> <br>De quoi bronzer jour et nuit. <img src="smile/square/razz.png" alt=":P" class="tid_ico"></p> </div>
+<div class="mainmessage" id="198"> 				<div class="char raluca" style=""></div>				<span class="buddy">Raluca :</span> <p><em><strong>Pilgred - Soleil Artificiel</strong></em> <br> <br>De quoi bronzer jour et nuit. <img src="smile/square/razz.png" alt=":P" class="tid_ico"></p><a class="link" href="#198">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
 <div class="reply"> 						<div class="char raluca" style=""></div>				<span class="buddy">Raluca :</span> <p>23%</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p>J'vous ai dit que je fais l'acteur à Hollywood Nova !?? <img src="smile/square/razz.png" alt=":P" class="tid_ico"></p> </div>
+<div class="mainmessage" id="199"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p>J'vous ai dit que je fais l'acteur à Hollywood Nova !?? <img src="smile/square/razz.png" alt=":P" class="tid_ico"></p><a class="link" href="#199">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2775,7 +2776,7 @@ function show(el) {
 <div class="reply"> 						<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p>Ou mayo, je suis pas regardant !</p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p><strong><em>Invitation à la table du Commandant</em></strong><br>La première invitation du jour a été envoyée à notre responsable animation "Rolo le rigolo".<br>Si vous souaitez une invitation, veuillez le faire savoir mais sachez que le commandant ne donne ses invitations qu'à des personnes spéciales....ou très sexys ! <img src="smile/square/razz.png" alt=":P" class="tid_ico"></p> </div>
+<div class="mainmessage" id="200"> 				<div class="char jin_su" style=""></div>				<span class="buddy">Jin Su :</span> <p><strong><em>Invitation à la table du Commandant</em></strong><br>La première invitation du jour a été envoyée à notre responsable animation "Rolo le rigolo".<br>Si vous souaitez une invitation, veuillez le faire savoir mais sachez que le commandant ne donne ses invitations qu'à des personnes spéciales....ou très sexys ! <img src="smile/square/razz.png" alt=":P" class="tid_ico"></p><a class="link" href="#200">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2785,7 +2786,7 @@ function show(el) {
 <div class="reply"> 						<div class="char raluca" style=""></div>				<span class="buddy">Raluca :</span> <p>Dix-huit nœuds et quatre cent tonneaux, ça doit bien secouer! <img src="smile/square/razz.png" alt=":P" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><strong>Attention !</strong><br><strong><em>GRANDE ANIMATION ce soir autour de la piscine du PONT A !</em></strong></p> </div>
+<div class="mainmessage" id="201"> 				<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><strong>Attention !</strong><br><strong><em>GRANDE ANIMATION ce soir autour de la piscine du PONT A !</em></strong></p><a class="link" href="#201">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2803,7 +2804,7 @@ function show(el) {
 <div class="reply"> 						<div class="char roland" style=""></div>				<span class="buddy">Roland :</span> <p><img src="smile/square/puke.png" alt="°x°" class="tid_ico"></p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: suppression d'un équipement vital par <strong>Terrence</strong>. <strong>LA DOUCHE</strong>. </div>
+<div class="mainmessage" id="202"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: suppression d'un équipement vital par <strong>Terrence</strong>. <strong>LA DOUCHE</strong>.<a class="link" href="#202">Ancre</a> </div>
 
 <div class="show" onclick="show(this);">Montrer les réponses</div>
 <div class="hiddenreplies">
@@ -2825,15 +2826,15 @@ function show(el) {
 <div class="reply"> 						<div class="char frieda" style=""></div>				<span class="buddy">Frieda :</span> <p>Je ne comprend pas ce qui lui arrive il doit etre tres vieux ou precoce</p> </div>
 </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: redémarrage de l'équipement <strong>Simulateur de Gravité</strong>. Rapport d'activité&nbsp;: <em>propulsion humaine facilitée.</em> </div>
+<div class="mainmessage" id="203"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Annonce&nbsp;: redémarrage de l'équipement <strong>Simulateur de Gravité</strong>. Rapport d'activité&nbsp;: <em>propulsion humaine facilitée.</em><a class="link" href="#203">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Ajustement A-True&nbsp;: <em>titre réattribué</em>. Nouveau «&nbsp;<strong>Commandant</strong>&nbsp;» : <strong>Jin Su</strong>. </div>
+<div class="mainmessage" id="204"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Ajustement A-True&nbsp;: <em>titre réattribué</em>. Nouveau «&nbsp;<strong>Commandant</strong>&nbsp;» : <strong>Jin Su</strong>.<a class="link" href="#204">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Ajustement A-True&nbsp;: <em>titre réattribué</em>. Nouveau «&nbsp;<strong>Admin. NERON</strong>&nbsp;» : <strong>Janice</strong>. </div>
+<div class="mainmessage" id="205"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Ajustement A-True&nbsp;: <em>titre réattribué</em>. Nouveau «&nbsp;<strong>Admin. NERON</strong>&nbsp;» : <strong>Janice</strong>.<a class="link" href="#205">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Ajustement A-True&nbsp;: <em>titre réattribué</em>. Nouveau «&nbsp;<strong>Resp. Communications</strong>&nbsp;» : <strong>Paola</strong>. </div>
+<div class="mainmessage" id="206"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Ajustement A-True&nbsp;: <em>titre réattribué</em>. Nouveau «&nbsp;<strong>Resp. Communications</strong>&nbsp;» : <strong>Paola</strong>.<a class="link" href="#206">Ancre</a> </div>
 
-<div class="mainmessage"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Avarie mineure du <strong>système cryogénique</strong>. Toute utilisation future suspendra <em>définitivement</em> les fonctions vitales du sujet. </div>
+<div class="mainmessage" id="207"> 					<div class="neron"></div>				<span class="buddy">NERON :</span> Avarie mineure du <strong>système cryogénique</strong>. Toute utilisation future suspendra <em>définitivement</em> les fonctions vitales du sujet.<a class="link" href="#207">Ancre</a> </div>
 
 
 

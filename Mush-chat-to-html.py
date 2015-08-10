@@ -36,9 +36,10 @@ dest.write("<html>\n<head>\n\t<title>" + input("Nom de la partie : ") + " — 
 dest.write("\t<style>\n" +
 "		#wall { max-width: 800px; margin: 0 auto; }\n" +
 "		.hiddenreplies { display: none; }\n" +
-"		.mainmessage { border-radius: 8px; border: 2px #000440 solid; padding: 10px; margin-top: 20px; min-height: 48px; }\n" +
+"		.mainmessage { border-radius: 8px; border: 2px #000440 solid; padding: 10px; margin-top: 20px; min-height: 48px; position: relative; }\n" +
 "		.reply { margin-left: 50px; border-radius: 5px; border: 2px navy solid; padding: 10px; margin-top: 10px; }\n" +
 "		.show { text-align: right; color: green; cursor: pointer; }\n" +
+"		.link { position: absolute; bottom: 10px; right: 10px; }\n" +
 "		em { color: #F03; }\n" +
 "		strong { color: #30F; }\n" +
 "		.char { background: url('img/char.png'); background-repeat: no-repeat; width: 28px; height: 48px; resize: none; float: left; }\n" +
@@ -79,7 +80,7 @@ dest.write("\t<style>\n" +
 "}</script>\n\n")
 
 for k in range(0, len(mainmessages)):
-    dest.write('<div class="mainmessage"> ' + mainmessages[k] + ' </div>\n\n')
+    dest.write('<div class="mainmessage" id="' + str(k) + '"> ' + mainmessages[k] + '<a class="link" href="#' + str(k) + '">Ancre</a> </div>\n\n')
     if replies[k]:
         dest.write('<div class="show" onclick="show(this);">Montrer les réponses</div>\n<div class="hiddenreplies">\n')
         for l in range(0, len(replies[k])):
