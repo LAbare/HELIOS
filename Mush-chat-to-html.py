@@ -64,7 +64,8 @@ dest.write("\t<style>\n" +
 "		.finola { background-position: 0px -384px !important; }\n" +
 "		.terrence { background-position: 0px -720px !important; }\n" +
 "		.eleesha { background-position: 0px -672px !important; }\n" +
-"		.neron { background-image : url('img/neron_chat.png'); float: left; margin-right: 5px; height: 38px; width: 38px; }\n" +
+"		.mainmessage .neron { background-image : url('img/neron_chat.png'); float: left; margin-right: 5px; height: 38px; width: 38px; }\n" +
+"		.reply .neron { float: left; margin-right: 5px; }\n" +
 "	</style>\n" +
 "	<meta charset='UTF-8' />\n" +
 "</head>\n\n" +
