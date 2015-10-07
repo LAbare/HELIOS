@@ -17,10 +17,10 @@ for line in f:
         replies.append([])
         i += 1
         j = 0
-    if 'class="reply bubble"' in line:
+    if 'class="reply bubble' in line:
         ismainmessage = False
         replies[i].append('')
-    if 'class="char' in line or 'class="neron"' in line:
+    if 'class="char' in line or 'class="neron' in line:
         if ismainmessage:
             mainmessages[i] += smileySource(line.strip('\n'))
         else:
